@@ -224,7 +224,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
   <div class="hero-glow2"></div>
   <div class="hero-content">
     <div>
-      <div class="hero-tag fade-up fade-up-1">Mechanical Engineer · Robotics Minor · CMU 2027</div>
+      <div class="hero-tag fade-up fade-up-1">Mechanical Engineer · Robotics · CMU 2027</div>
       <h1 class="fade-up fade-up-2">Julia Meryl<br><span class="last-name">Meyerson</span><br><span style="font-size:0.38em;font-weight:400;color:var(--muted);-webkit-text-stroke:0;letter-spacing:0.05em;font-family:'DM Mono',monospace;">(Meryl)</span></h1>
       <p class="hero-desc fade-up fade-up-3">
         Junior ME student at Carnegie Mellon studying mechanical engineering and robotics. Internships at Caterpillar, RST Automation; incoming at <strong>Symbotic</strong> this summer.
@@ -251,7 +251,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
     <div class="about-text">
       <h2 style="font-size:1.5rem;margin-bottom:0.5rem;">About</h2>
 
-      <p>Junior at Carnegie Mellon studying Mechanical Engineering with a minor in Robotics. I'm drawn to problems where mechanical design and software intersect - autonomous robots, assistive exoskeletons, precision mechatronic systems.</p>
+      <p>Junior at Carnegie Mellon studying Mechanical Engineering and Robotics. I'm drawn to problems where mechanical design and software intersect - autonomous robots, assistive exoskeletons, precision mechatronic systems.</p>
       <p>Past internships at <strong>Caterpillar</strong> (fuel system mechatronics) and <strong>RST Automation</strong>; this summer joining <strong>Symbotic's</strong> mechatronics team. Research on robotic exoskeletons at CMU's Robotics Institute and on autonomous UGVs for electrical substation inspection.</p>
       <p>Outside class I TA Mechanics I and II, co-lead a 100+ person team designing and building full one-story Spring Carnival booths with working electricity, and am a member of Apex Buggy where we build, maintain, and race carbon fiber gravity racers.</p>
       <div class="skills-grid">
@@ -288,7 +288,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       </div>
       <div class="edu-info">
         <h3>Carnegie Mellon University</h3>
-        <p class="edu-degree">B.S. Mechanical Engineering · Minor in Robotics</p>
+        <p class="edu-degree">B.S. Mechanical Engineering · Robotics</p>
         <p class="edu-date">Pittsburgh, PA · Expected May 2027</p>
         <div class="honors">
           <span class="honor-badge">Dean's List ×4</span>
@@ -520,7 +520,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       <!-- F1TENTH - featured -->
       <div class="project-card featured" data-cat="class" onclick="openModal('f1tenth')">
         <div class="project-img">
-          <div class="img-placeholder"><div class="proj-icon">🏎️</div><span>F1Tenth Photos</span></div>
+          <img src="images/card-f1tenth.jpg" alt="F1Tenth autonomous race car" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="project-body">
           <div class="project-category">Class Project · Robotics</div>
@@ -535,8 +535,8 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 
       <!-- EXO -->
       <div class="project-card" data-cat="research" onclick="openModal('exo')">
-        <div class="project-img" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
-          
+        <div class="project-img">
+          <img src="images/card-exo.jpg" alt="Assistive exoskeletons" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="project-body">
           <div class="project-category">Research · CMU MetaMobility Lab · Robotics Institute</div>
@@ -691,14 +691,14 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       </div>
 
       <div class="misc-card" onclick="openModal('woodworking')">
-        <div style="width:100%;aspect-ratio:3/2;background:var(--surface);border:1px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:0.85rem;font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;">📷 Add photo</div>
+        <img src="images/card-woodworking.jpg" alt="Woodworking projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">Woodworking</div>
         <p class="misc-card-desc">Personal woodworking projects: chess set with 3D-printed pieces, wood-lathe desk, hand-chiseled dovetail box, tool chest, CNC bookends.</p>
         <div class="misc-tags"><span class="misc-tag">CNC</span><span class="misc-tag">Wood Lathe</span><span class="misc-tag">Hand Tools</span></div>
       </div>
 
       <div class="misc-card" onclick="openModal('robotics280')">
-        <div style="width:100%;aspect-ratio:3/2;background:var(--surface);border:1px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:0.85rem;font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;">📷 Add photo</div>
+        <img src="images/card-16280.jpg" alt="16-280 Robotics projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">16-280 Intelligent Robotics Systems</div>
         <p class="misc-card-desc"> Implemented Turtlebot with sensor fusion, ICP mapping, occupancy grid mapping, behavior trees, and regression vision models; Implemented kinematic planning on 4-DOF arm. </p>
         <div class="misc-tags"><span class="misc-tag">ROS2</span><span class="misc-tag">Robotics</span><span class="misc-tag">CMU</span></div>
@@ -771,13 +771,19 @@ const projects = {
     body: `<img src="images/exo-collage.jpg" alt="Exoskeleton project collage" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Hip Exoskeleton:</strong> Led fabrication of carbon fiber components including parts procurement, safety coordination, layup and post-processing. Redesigned the thigh bar attachment, developing both sliding and fixed designs in carbon fiber and aluminum with a focus on machinability. Authored lab fabrication documentation.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Ankle Exoskeleton:</strong> Researched state-of-the-art designs, then designed and iterated belt-drive and 4-bar mechanism solutions to control plantarflexion and dorsiflexion. Designed to interface with the lab's existing exoskeleton hardware; began manufacturing.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin:1.25rem 0;">
+      <img src="images/exo-detail-1.jpg" alt="Exo detail 1" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/exo-detail-2.jpg" alt="Exo detail 2" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/exo-detail-3.jpg" alt="Exo detail 3" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/exo-detail-4.jpg" alt="Exo detail 4" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/exo-detail-5.jpg" alt="Exo detail 5" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+    </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Carbon Fiber Layup</span><span class="tag">SolidWorks</span><span class="tag">3D Printing</span><span class="tag">Biomechanics</span><span class="tag">Mechanical Design</span></div>`
   },
   ugv: {
     cat: 'Research · Stevens RFAL · ASME Publication',
     title: 'Substation Inspection UGVs',
     body: `<img src="images/project-ugv.jpg" alt="UGV substation robot" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;"><p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Autonomous UGVs designed to navigate and inspect electrical substations - hazardous environments for human workers. Built at the Robust Field Autonomy Lab at Stevens Institute of Technology.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Developed the full autonomy stack: LiDAR-based navigation, computer vision for barcode recognition, OCR for breaker data collection, robotic manipulators for equipment interaction, and a virtual Gazebo environment for simulation testing. The resulting UGV achieved the most versatile navigation system of all robots designed for substation monitoring.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--accent);">Published:</strong> ASME Journal of Mechanisms and Robotics &nbsp;·&nbsp; <strong style="color:var(--accent);">Regeneron ISEF Finalist</strong> &nbsp;·&nbsp; <strong style="color:var(--accent);">JSHS National Delegate</strong></p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">ROS / Gazebo / RViz</span><span class="tag">LiDAR</span><span class="tag">Computer Vision</span><span class="tag">OCR</span><span class="tag">Python</span><span class="tag">Manipulation</span></div>`
   },
@@ -808,6 +814,13 @@ const projects = {
     body: `<div class="modal-img-grid"><img src="images/project-hiking-chair-front.jpg" style="aspect-ratio:1;object-fit:cover;" alt="Chair front"><img src="images/project-hiking-chair-backpack.jpg" style="aspect-ratio:1;object-fit:cover;" alt="Chair backpack mode"></div>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Dual-function hiking chair/backpack developed through a full user-centered design process. Progressed from user research insights through low and mid-fidelity prototypes to a final functional build with two modes and adjustable telescoping legs.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Structural validation via FEA (Ansys) and hand calculations. Fabrication involved manual machining, mechatronics integration, and sewing.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin:1.25rem 0;">
+      <img src="images/chair-detail-1.jpg" alt="Chair detail 1" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/chair-detail-2.jpg" alt="Chair detail 2" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/chair-detail-3.jpg" alt="Chair detail 3" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/chair-detail-4.jpg" alt="Chair detail 4" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/chair-detail-5.jpg" alt="Chair detail 5" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+    </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">FEA / Ansys</span><span class="tag">Hand Calculations</span><span class="tag">Manual Machining</span><span class="tag">UX Research</span><span class="tag">Prototyping</span></div>`
   },
   appliance: {
@@ -817,6 +830,13 @@ const projects = {
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Problem:</strong> Standard potato mashers require significant grip strength and repetitive forceful motion - barriers for users with cerebral palsy or wrist tendonitis. User surveys confirmed pain and fatigue as primary issues, along with difficulty controlling texture.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Design:</strong> A motorized, self-balancing masher with a linear actuator to drive mashing force without user input. A frame clamps to the bowl with adjustable velcro, keeping the device centered and stable. A ball joint attached to a joystick lets the user steer the masher around the bowl, preserving texture control. The oversized on/off button is designed for one-finger operation, and the masher end is fully removable for cleaning.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Key specs met:</strong> Sufficient mashing force without user input; self-steadying during operation; easy to clean; user control over movement retained.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin:1.25rem 0;">
+      <img src="images/masher-detail-1.jpg" alt="Masher detail 1" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/masher-detail-2.jpg" alt="Masher detail 2" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/masher-detail-3.jpg" alt="Masher detail 3" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/masher-detail-4.jpg" alt="Masher detail 4" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+      <img src="images/masher-detail-5.jpg" alt="Masher detail 5" style="width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--border);">
+    </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Linear Actuator</span><span class="tag">Ball Joint / Joystick</span><span class="tag">3D Printing</span><span class="tag">User Research</span><span class="tag">Iterative Prototyping</span><span class="tag">Electromechanical</span></div>`
   },
   hackathon: {

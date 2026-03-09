@@ -88,7 +88,7 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .projects-filter{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
 .filter-btn{font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.35rem 0.9rem;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
 .filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(127,255,178,0.06);}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;}
 .project-card{background:var(--card-bg);border:1px solid var(--border);overflow:hidden;position:relative;cursor:pointer;transition:all 0.3s;display:flex;flex-direction:column;}
 .project-card:hover{border-color:rgba(127,255,178,0.25);transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,0.4);}
 .project-card.featured{grid-column:span 2;}
@@ -111,10 +111,10 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .booth-year-header{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:0.4rem;}
 .booth-year-sub{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;}
 .booth-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem;}
-.booth-gallery-item{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--border);background:var(--surface);position:relative;cursor:pointer;}
-.booth-gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.booth-gallery-item{aspect-ratio:1;overflow:hidden;border:1px solid var(--border);background:var(--surface);position:relative;cursor:pointer;}
+.booth-gallery-item img{width:100%;height:100%;object-fit:contain;background:var(--bg3);transition:transform 0.4s;}
 .booth-gallery-item:hover img{transform:scale(1.05);}
-.booth-gallery-item.wide{grid-column:span 2;aspect-ratio:16/7;}
+.booth-gallery-item.wide{grid-column:span 2;aspect-ratio:2/1;}
 .booth-gallery-item .caption{position:absolute;bottom:0;left:0;right:0;padding:0.5rem 0.75rem;background:linear-gradient(transparent,rgba(10,10,15,0.85));font-family:'DM Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.7);letter-spacing:0.06em;opacity:0;transition:opacity 0.3s;}
 .booth-gallery-item:hover .caption{opacity:1;}
 .booth-desc-text{color:var(--muted);font-size:0.88rem;line-height:1.75;margin-bottom:1.25rem;}
@@ -645,25 +645,6 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
     </div>
   </div>
 
-  <div class="booth-year-block">
-    <div class="booth-year-header">Beauty & the Beast - 2024</div>
-    <div class="booth-year-sub">Spring Carnival 2024</div>
-    <p class="booth-desc-text">Enchanted castle themed booth with custom props, structural woodwork, themed decorations, and immersive lighting.</p>
-    <div class="booth-gallery">
-      <div class="booth-gallery-item" style="background:var(--surface);display:flex;align-items:center;justify-content:center;">
-        <div style="text-align:center;color:var(--muted);padding:1rem;">
-          <div style="font-size:1.5rem;margin-bottom:0.5rem;">📷</div>
-          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;">Booth photos<br>coming soon</div>
-        </div>
-      </div>
-      <div class="booth-gallery-item" style="background:var(--surface);display:flex;align-items:center;justify-content:center;">
-        <div style="text-align:center;color:var(--muted);padding:1rem;">
-          <div style="font-size:1.5rem;margin-bottom:0.5rem;">📷</div>
-          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;">Prop photos<br>coming soon</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- MISCELLANEOUS -->
@@ -846,20 +827,23 @@ const projects = {
   hackathon: {
     cat: 'Miscellaneous · CMU Hackathons',
     title: 'Robot Hackathons',
-    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--accent);">Red Robot Hackathon - Judges' Choice Award:</strong> Built a competition robot with PID line-following, robotic manipulators, and remote control.</p>
+    body: `<div class="modal-img-grid"><img src="images/hackathon-red-robot.jpg" style="aspect-ratio:1;object-fit:cover;" alt="Red Robot Hackathon"><img src="images/hackathon-garbage.jpg" style="aspect-ratio:1;object-fit:cover;" alt="Garbage Hackathon"></div>
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--accent);">Red Robot Hackathon - Judges' Choice Award:</strong> Built a competition robot with PID line-following, robotic manipulators, and remote control.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--accent);">Garbage Hackathon - Best Use of E-waste:</strong> Creative locomotion robot built from repurposed electronics.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">PID Control</span><span class="tag">Mechatronics</span><span class="tag">Arduino</span><span class="tag">Rapid Prototyping</span></div>`
   },
   walle: {
     cat: 'Class Project · Humanoids',
     title: '"Wall-E" Social Robot',
-    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Tracked Wall-E-inspired social robot with facial recognition, autonomous operation modes, and remote control. Built as a class project at CMU.</p>
+    body: `<img src="images/misc-walle-robot.jpg" alt="Wall-E social robot" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Tracked Wall-E-inspired social robot with facial recognition, autonomous operation modes, and remote control. Built as a class project at CMU.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Facial Recognition</span><span class="tag">Autonomous Control</span><span class="tag">Mechatronics</span><span class="tag">Fabrication</span></div>`
   },
   mobot: {
     cat: 'Miscellaneous · Intro Projects',
     title: 'Intro Course Projects',
-    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Mobot:</strong> Programmed a robot to autonomously navigate a maze and deposit a shape from a 3D-printed structure.</p>
+    body: `<img src="images/misc-mobot.jpg" alt="MechE class projects" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Mobot:</strong> Programmed a robot to autonomously navigate a maze and deposit a shape from a 3D-printed structure.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">5g Acrylic Bar Holding 40 lb (Mechanics I):</strong> Designed dozens of iterations; stress analysis by hand and FEA.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">4-Bar Linkage (Mechanics I):</strong> Kinematic design and analysis.</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Brittle Failure (Mechanics II):</strong> Iterated designs for an acrylic bar; analyzed brittle fracture by hand and FEA.</p>
@@ -869,7 +853,8 @@ const projects = {
   robotics280: {
     cat: 'Miscellaneous · CMU',
     title: '16-280 Intelligent Robotics Systems Projects',
-    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Projects from CMU's 16-280 Intelligent Robotics Systems course. More detail coming soon.</p>
+    body: `<img src="images/card-16280.jpg" alt="16-280 Robotics projects" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Implemented Turtlebot with sensor fusion, ICP mapping, occupancy grid mapping, behavior trees, and regression vision models; Implemented kinematic planning on 4-DOF arm.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">ROS2</span><span class="tag">Robotics</span><span class="tag">Autonomous Systems</span></div>`
   },
   woodworking: {

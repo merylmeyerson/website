@@ -140,6 +140,14 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .honors{display:flex;flex-wrap:wrap;gap:0.4rem;}
 .honor-badge{font-family:'DM Mono',monospace;font-size:0.6rem;padding:0.22rem 0.6rem;background:rgba(127,255,178,0.06);border:1px solid rgba(127,255,178,0.2);color:var(--accent);letter-spacing:0.08em;}
 
+/* CLASSES */
+.classes-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+@media(max-width:900px){.classes-grid{grid-template-columns:1fr;}}
+.class-group h4{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem;}
+.class-list{list-style:none;display:flex;flex-direction:column;gap:0.35rem;margin-bottom:1.5rem;}
+.class-list li{font-size:0.82rem;color:var(--muted);display:flex;align-items:baseline;gap:0.6rem;line-height:1.5;}
+.class-list li .course-num{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--accent);opacity:0.6;min-width:3.5rem;text-align:right;flex-shrink:0;}
+
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .contact-cta p{color:var(--muted);margin-bottom:2rem;line-height:1.7;font-size:0.95rem;}
@@ -200,6 +208,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
   <a href="#" class="nav-logo">M<span>M</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#classes">Classes</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#booth">Booth</a></li>
@@ -288,6 +297,77 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
     </div>
   </div>
 </div>
+
+<!-- CLASSES -->
+<section id="classes">
+  <div class="section-label">Coursework</div>
+  <h2>Classes at CMU</h2>
+  <div class="classes-grid">
+    <div>
+      <div class="class-group">
+        <h4>Mechanical Engineering</h4>
+        <ul class="class-list">
+          <li><span class="course-num">24101</span> Fundamentals of Mechanical Engineering</li>
+          <li><span class="course-num">24261</span> Mechanics I: 2D Design</li>
+          <li><span class="course-num">24262</span> Mechanics II: 3D Design</li>
+          <li><span class="course-num">24351</span> Dynamics</li>
+          <li><span class="course-num">24352</span> Dynamic Systems and Controls</li>
+          <li><span class="course-num">24221</span> Thermodynamics</li>
+          <li><span class="course-num">24231</span> Fluid Mechanics</li>
+          <li><span class="course-num">24322</span> Heat Transfer</li>
+          <li><span class="course-num">24311</span> Numerical Methods</li>
+          <li><span class="course-num">24370</span> Mechanical Design: Methods and Applications</li>
+          <li><span class="course-num">24321</span> Thermal-Fluids Experimentation</li>
+          <li><span class="course-num">36220</span> Engineering Statistics and Quality Control</li>
+          <li><span class="course-num">24391/92</span> Mechanical Engineering Project</li>
+          <li><span class="course-num">24302</span> Professional Development for Mechanical Engineers</li>
+        </ul>
+      </div>
+      <div class="class-group">
+        <h4>Robotics & Computer Science</h4>
+        <ul class="class-list">
+          <li><span class="course-num">15112</span> Fundamentals of Programming and Computer Science</li>
+          <li><span class="course-num">18100</span> Introduction to Electrical and Computer Engineering</li>
+          <li><span class="course-num">16280</span> Intelligent Robot Systems</li>
+          <li><span class="course-num">16264</span> Humanoids</li>
+          <li><span class="course-num">16663</span> F1Tenth Autonomous Racing</li>
+          <li><span class="course-num">16730</span> Robotics Business</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="class-group">
+        <h4>Math & Science</h4>
+        <ul class="class-list">
+          <li><span class="course-num">21254</span> Linear Algebra and Vector Calculus for Engineers</li>
+          <li><span class="course-num">21122</span> Integration and Approximation</li>
+          <li><span class="course-num">21260</span> Differential Equations</li>
+          <li><span class="course-num">33141</span> Physics I for Engineering Students</li>
+          <li><span class="course-num">33142</span> Physics II for Engineering and Physics Students</li>
+          <li><span class="course-num">09101</span> Introduction to Experimental Chemistry</li>
+          <li><span class="course-num">09111</span> Nanolegos: Chemical Building Blocks</li>
+        </ul>
+      </div>
+      <div class="class-group">
+        <h4>Fabrication & Making</h4>
+        <ul class="class-list">
+          <li><span class="course-num">24300</span> TechSpark: Machine Shop CNC Milling</li>
+          <li><span class="course-num">24200</span> Maker Series: Intro to Manual Machining</li>
+          <li><span class="course-num">99353</span> IDeATe: Design Essentials for Laser Cutting</li>
+          <li><span class="course-num">99354</span> IDeATe: Essentials of Woodworking</li>
+        </ul>
+      </div>
+      <div class="class-group">
+        <h4>Other</h4>
+        <ul class="class-list">
+          <li><span class="course-num">76101</span> Interpretation and Argument</li>
+          <li><span class="course-num">79281</span> Introduction to Religion</li>
+          <li>Summer Undergraduate Research Apprenticeship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- EXPERIENCE -->
 <section id="experience">

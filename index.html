@@ -88,20 +88,20 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .projects-filter{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
 .filter-btn{font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.35rem 0.9rem;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
 .filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(127,255,178,0.06);}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
 .project-card{background:var(--card-bg);border:1px solid var(--border);overflow:hidden;position:relative;cursor:pointer;transition:all 0.3s;display:flex;flex-direction:column;}
 .project-card:hover{border-color:rgba(127,255,178,0.25);transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,0.4);}
 .project-card.featured{grid-column:span 2;}
-.project-img{width:100%;aspect-ratio:16/9;background:var(--surface);overflow:hidden;position:relative;}
-.project-card.featured .project-img{aspect-ratio:21/8;}
+.project-img{width:100%;aspect-ratio:4/3;background:var(--surface);overflow:hidden;position:relative;}
+.project-card.featured .project-img{aspect-ratio:16/9;}
 .project-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
 .project-card:hover .project-img img{transform:scale(1.04);}
 .img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--surface),var(--bg3));color:var(--muted);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;flex-direction:column;gap:0.5rem;}
 .img-placeholder .proj-icon{font-size:2rem;opacity:0.4;}
-.project-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;}
+.project-body{padding:1rem;flex:1;display:flex;flex-direction:column;}
 .project-category{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem;}
-.project-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.6rem;line-height:1.3;}
-.project-desc{font-size:0.85rem;color:var(--muted);line-height:1.65;flex:1;}
+.project-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;line-height:1.3;}
+.project-desc{font-size:0.8rem;color:var(--muted);line-height:1.6;flex:1;}
 .project-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:1rem;}
 .project-tag{font-family:'DM Mono',monospace;font-size:0.58rem;padding:0.18rem 0.45rem;background:rgba(91,200,255,0.08);border:1px solid rgba(91,200,255,0.15);color:var(--accent2);letter-spacing:0.05em;}
 
@@ -361,8 +361,9 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         <h4>Other</h4>
         <ul class="class-list">
           <li><span class="course-num">76101</span> Interpretation and Argument</li>
+          <li><span class="course-num">76239</span> Introduction to Film Studies</li>
           <li><span class="course-num">79281</span> Introduction to Religion</li>
-          <li>Summer Undergraduate Research Apprenticeship</li>
+          <li><span class="course-num">99270</span> Summer Undergraduate Research Apprenticeship</li>
         </ul>
       </div>
     </div>
@@ -778,9 +779,22 @@ const projects = {
   f1tenth: {
     cat: 'Class Project · Robotics',
     title: 'F1Tenth Autonomous Racing',
-    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Built and programmed a 1/10-scale autonomous race car on the F1Tenth platform, used globally for autonomous driving research and education.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Implemented LiDAR-based perception pipelines, motion planning algorithms, and real-time control systems for high-speed autonomous track navigation.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;font-style:italic;">More detail and video coming soon.</p>
+    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">Built and programmed a 1/10-scale autonomous race car on the F1Tenth platform. Implemented LiDAR-based perception, motion planning, and real-time control for high-speed autonomous track navigation.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;display:flex;align-items:center;justify-content:center;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_AEB_SIM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Automatic Emergency Braking (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_PID_SIM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">PID Wall Following (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_PID_REAL" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">PID Wall Following (Real)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_FTG_SIM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Follow the Gap (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_FTG_REAL" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Follow the Gap (Real)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_PP_SLAM_SIM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Pure Pursuit + SLAM (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_PP_SLAM_REAL" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Pure Pursuit + SLAM (Real)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_MP_SIM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Motion Planning (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_MP_REAL" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Motion Planning (Real)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_VISION_SIM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Vision (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_VISION_REAL" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Vision (Real)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_MPC" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Model Predictive Control</p></div>
+      <div style="grid-column:1/-1;"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="YOUTUBE_EMBED_URL_FINAL" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.06em;">Final Project</p></div>
+    </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">ROS2</span><span class="tag">Python</span><span class="tag">LiDAR</span><span class="tag">Path Planning</span><span class="tag">Real-Time Control</span></div>`
   },
   hikingchair: {
@@ -832,13 +846,15 @@ const projects = {
   woodworking: {
     cat: 'Miscellaneous · Personal',
     title: 'Woodworking',
-    body: `<p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem;font-style:italic;">More photos and projects coming soon.</p><ul style="list-style:none;color:var(--muted);line-height:2;">
-      <li style="padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span><strong style="color:var(--text);">Chess Set</strong> - walnut board + 3D-printed pieces</li>
-      <li style="padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span><strong style="color:var(--text);">Desk</strong> - shelves, drawer, wood-lathe-turned legs</li>
-      <li style="padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span><strong style="color:var(--text);">Dovetail Box</strong> - hand-chiseled joinery</li>
-      <li style="padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span><strong style="color:var(--text);">Tool Chest</strong> - with bottom drawer</li>
-      <li style="padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span><strong style="color:var(--text);">CNC Bookends</strong></li>
-    </ul>
+    body: `<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem;">
+      <div><img src="images/wood-chess-set.jpg" alt="Chess set" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Chess Set</p></div>
+      <div><img src="images/wood-desk.jpg" alt="Desk" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Desk</p></div>
+      <div><img src="images/wood-candlesticks.jpg" alt="Candlesticks" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Candlesticks</p></div>
+      <div><img src="images/wood-spoon.jpg" alt="Spoon" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Spoon</p></div>
+      <div><img src="images/wood-viking-chair.jpg" alt="Viking chair" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Viking Chair</p></div>
+      <div><img src="images/wood-dovetail-box.jpg" alt="Dovetail box" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Box w/ Hand-Chiseled Dovetails</p></div>
+      <div style="grid-column:1/-1;"><img src="images/wood-tool-chest.jpg" alt="Tool chest" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Tool Chest w/ Bottom Drawer</p></div>
+    </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">CNC Router</span><span class="tag">Wood Lathe</span><span class="tag">Tablesaw</span><span class="tag">Hand Tools</span></div>`
   }
 };

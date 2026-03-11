@@ -653,6 +653,20 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
     <h2>Other Work</h2>
     <div class="misc-grid">
 
+      <div class="misc-card" onclick="openModal('robotics280')">
+        <img src="images/card-16280.jpg" alt="16-280 Robotics projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
+        <div class="misc-card-title">16-280 Intelligent Robotics Systems</div>
+        <p class="misc-card-desc"> Implemented Turtlebot with sensor fusion, ICP mapping, occupancy grid mapping, behavior trees, and regression vision models; Implemented kinematic planning on 4-DOF arm. </p>
+        <div class="misc-tags"><span class="misc-tag">ROS2</span><span class="misc-tag">Robotics</span><span class="misc-tag">CMU</span></div>
+      </div>
+
+      <div class="misc-card" onclick="openModal('woodworking')">
+        <img src="images/card-woodworking.jpg" alt="Woodworking projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
+        <div class="misc-card-title">Woodworking</div>
+        <p class="misc-card-desc">Personal woodworking projects: chess set with 3D-printed pieces, wood-lathe desk, hand-chiseled dovetail box, tool chest, CNC bookends.</p>
+        <div class="misc-tags"><span class="misc-tag">CNC</span><span class="misc-tag">Wood Lathe</span><span class="misc-tag">Hand Tools</span></div>
+      </div>
+
       <div class="misc-card" onclick="openModal('hackathon')">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:0.85rem;"><img src="images/hackathon-red-robot.jpg" alt="Red Robot Hackathon" style="width:100%;aspect-ratio:1;object-fit:cover;"><img src="images/hackathon-garbage.jpg" alt="Garbage Hackathon" style="width:100%;aspect-ratio:1;object-fit:cover;"></div>
         <div class="misc-card-title">Robot Hackathons</div>
@@ -674,24 +688,10 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         <div class="misc-tags"><span class="misc-tag">Arduino</span><span class="misc-tag">SolidWorks</span><span class="misc-tag">FEA</span><span class="misc-tag">3D Printing</span></div>
       </div>
 
-      <div class="misc-card" onclick="openModal('woodworking')">
-        <img src="images/card-woodworking.jpg" alt="Woodworking projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
-        <div class="misc-card-title">Woodworking</div>
-        <p class="misc-card-desc">Personal woodworking projects: chess set with 3D-printed pieces, wood-lathe desk, hand-chiseled dovetail box, tool chest, CNC bookends.</p>
-        <div class="misc-tags"><span class="misc-tag">CNC</span><span class="misc-tag">Wood Lathe</span><span class="misc-tag">Hand Tools</span></div>
-      </div>
-
-      <div class="misc-card" onclick="openModal('robotics280')">
-        <img src="images/card-16280.jpg" alt="16-280 Robotics projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
-        <div class="misc-card-title">16-280 Intelligent Robotics Systems</div>
-        <p class="misc-card-desc"> Implemented Turtlebot with sensor fusion, ICP mapping, occupancy grid mapping, behavior trees, and regression vision models; Implemented kinematic planning on 4-DOF arm. </p>
-        <div class="misc-tags"><span class="misc-tag">ROS2</span><span class="misc-tag">Robotics</span><span class="misc-tag">CMU</span></div>
-      </div>
-
       <div class="misc-card" onclick="openModal('csapps')">
         <img src="images/card-csapps.jpg" alt="CS hackathons and apps" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">CS Hackathons & Apps</div>
-        <p class="misc-card-desc">Full-stack apps and hackathon projects built at CMU. Hack112 Social Good Award winner, fitness tracker, graph visualizer, and more.</p>
+        <p class="misc-card-desc">Award-winning hackathon apps, interactive tools, and games built in Python. Includes a Set card game variant, a polynomial graphing calculator, and more.</p>
         <div class="misc-tags"><span class="misc-tag">Python</span><span class="misc-tag">Tkinter</span><span class="misc-tag">Full-Stack</span><span class="misc-tag">Hackathon</span></div>
       </div>
 
@@ -865,25 +865,21 @@ const projects = {
   csapps: {
     cat: 'Miscellaneous · CS Projects & Hackathons',
     title: 'CS Hackathons & Apps',
-    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">A collection of software projects and hackathon entries built at CMU, ranging from award-winning social impact apps to interactive tools and games.</p>
-    <div style="margin-bottom:1.5rem;">
+    body: `<div style="margin-bottom:1.5rem;">
       <p style="color:var(--muted);line-height:1.8;margin-bottom:0.5rem;"><strong style="color:var(--accent);">Hack112: Social Good Award</strong></p>
-      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Grow</strong> - A mental health and wellness app designed to help users build positive daily habits through interactive tracking and gentle reminders. Built in 24 hours at CMU's Hack112 hackathon.</p>
-      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-grow-1.jpg" alt="Grow app screenshot 1" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-grow-2.jpg" alt="Grow app screenshot 2" style="aspect-ratio:16/10;object-fit:cover;"></div>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Grow</strong> - A mental health app that tracks daily habits (sleep, meals, exercise, social time) and grows a virtual garden as you check in. Features daily journaling prompts and a calendar view. Built in 24 hours at CMU's Hack112 hackathon.</p>
+      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-grow-1.jpg" alt="Grow app daily check-in" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-grow-2.jpg" alt="Grow app calendar view" style="aspect-ratio:16/10;object-fit:cover;"></div>
     </div>
     <div style="margin-bottom:1.5rem;">
-      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">SuperSet</strong> - A fitness tracking app with workout logging, progress visualization, and personalized recommendations.</p>
-      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-superset-1.jpg" alt="SuperSet screenshot 1" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-superset-2.jpg" alt="SuperSet screenshot 2" style="aspect-ratio:16/10;object-fit:cover;"></div>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">SuperSet</strong> - A variation of the card game Set with multiple themes and difficulty modes. Players identify valid sets from a grid of cards based on matching or differing attributes across shape, color, fill, and count.</p>
+      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-superset-1.jpg" alt="SuperSet standard mode" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-superset-2.jpg" alt="SuperSet creative theme" style="aspect-ratio:16/10;object-fit:cover;"></div>
     </div>
     <div style="margin-bottom:1.5rem;">
-      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">GraphApp</strong> - An interactive graph theory visualizer for exploring nodes, edges, and algorithms.</p>
-      <div style="margin-bottom:1.25rem;"><img src="images/app-graphapp.jpg" alt="GraphApp screenshot" style="width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--border);"></div>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">GraphApp</strong> - An interactive polynomial graphing calculator. Users enter equations in the form ax^n and the app plots them in real time with adjustable axes, color-coded curves, and the ability to layer multiple functions.</p>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Blot Shooter</strong> - A two-player arcade shooter set in a neon cityscape. Players control dots that fire laser patterns across a destructible skyline. Features multiple laser modes and color themes.</p>
+      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-graphapp.jpg" alt="GraphApp polynomial plotter" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-blotshooter.jpg" alt="Blot Shooter gameplay" style="aspect-ratio:16/10;object-fit:cover;"></div>
     </div>
-    <div style="margin-bottom:1.5rem;">
-      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Blot Shooter</strong> - A fast-paced arcade-style game with procedural level generation and real-time collision mechanics.</p>
-      <div style="margin-bottom:1.25rem;"><img src="images/app-blotshooter.jpg" alt="Blot Shooter screenshot" style="width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--border);"></div>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Full-Stack</span><span class="tag">UI/UX</span><span class="tag">Hackathon</span></div>`
+    <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Game Design</span><span class="tag">Hackathon</span></div>`
   },
   woodworking: {
     cat: 'Miscellaneous · Personal',

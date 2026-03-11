@@ -688,6 +688,13 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         <div class="misc-tags"><span class="misc-tag">ROS2</span><span class="misc-tag">Robotics</span><span class="misc-tag">CMU</span></div>
       </div>
 
+      <div class="misc-card" onclick="openModal('csapps')">
+        <img src="images/card-csapps.jpg" alt="CS hackathons and apps" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
+        <div class="misc-card-title">CS Hackathons & Apps</div>
+        <p class="misc-card-desc">Full-stack apps and hackathon projects built at CMU. Hack112 Social Good Award winner, fitness tracker, graph visualizer, and more.</p>
+        <div class="misc-tags"><span class="misc-tag">Python</span><span class="misc-tag">Tkinter</span><span class="misc-tag">Full-Stack</span><span class="misc-tag">Hackathon</span></div>
+      </div>
+
       <div class="misc-card">
         <div class="misc-card-title">Bucks Rock Camp - Counselor</div>
         <p class="misc-card-desc">Computer and Fabrication Lab Counselor (Summer 2023). Taught graphic design, coding, CNC use, 3D printing, and video game design to campers.</p>
@@ -854,6 +861,29 @@ const projects = {
     body: `<img src="images/card-16280.jpg" alt="16-280 Robotics projects" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Implemented Turtlebot with sensor fusion, ICP mapping, occupancy grid mapping, behavior trees, and regression vision models; Implemented kinematic planning on 4-DOF arm.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">ROS2</span><span class="tag">Robotics</span><span class="tag">Autonomous Systems</span></div>`
+  },
+  csapps: {
+    cat: 'Miscellaneous · CS Projects & Hackathons',
+    title: 'CS Hackathons & Apps',
+    body: `<p style="color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">A collection of software projects and hackathon entries built at CMU, ranging from award-winning social impact apps to interactive tools and games.</p>
+    <div style="margin-bottom:1.5rem;">
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.5rem;"><strong style="color:var(--accent);">Hack112: Social Good Award</strong></p>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Grow</strong> - A mental health and wellness app designed to help users build positive daily habits through interactive tracking and gentle reminders. Built in 24 hours at CMU's Hack112 hackathon.</p>
+      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-grow-1.jpg" alt="Grow app screenshot 1" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-grow-2.jpg" alt="Grow app screenshot 2" style="aspect-ratio:16/10;object-fit:cover;"></div>
+    </div>
+    <div style="margin-bottom:1.5rem;">
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">SuperSet</strong> - A fitness tracking app with workout logging, progress visualization, and personalized recommendations.</p>
+      <div class="modal-img-grid" style="margin-bottom:1.25rem;"><img src="images/app-superset-1.jpg" alt="SuperSet screenshot 1" style="aspect-ratio:16/10;object-fit:cover;"><img src="images/app-superset-2.jpg" alt="SuperSet screenshot 2" style="aspect-ratio:16/10;object-fit:cover;"></div>
+    </div>
+    <div style="margin-bottom:1.5rem;">
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">GraphApp</strong> - An interactive graph theory visualizer for exploring nodes, edges, and algorithms.</p>
+      <div style="margin-bottom:1.25rem;"><img src="images/app-graphapp.jpg" alt="GraphApp screenshot" style="width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--border);"></div>
+    </div>
+    <div style="margin-bottom:1.5rem;">
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;"><strong style="color:var(--text);">Blot Shooter</strong> - A fast-paced arcade-style game with procedural level generation and real-time collision mechanics.</p>
+      <div style="margin-bottom:1.25rem;"><img src="images/app-blotshooter.jpg" alt="Blot Shooter screenshot" style="width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--border);"></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Full-Stack</span><span class="tag">UI/UX</span><span class="tag">Hackathon</span></div>`
   },
   woodworking: {
     cat: 'Miscellaneous · Personal',

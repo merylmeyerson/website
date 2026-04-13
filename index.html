@@ -110,10 +110,10 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .booth-year-block{margin-bottom:3.5rem;}
 .booth-year-header{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:0.4rem;}
 .booth-year-sub{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;}
-.booth-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem;}
-.booth-gallery-item{aspect-ratio:1;overflow:hidden;border:1px solid var(--border);background:var(--surface);position:relative;cursor:pointer;}
-.booth-gallery-item img{width:100%;height:100%;object-fit:contain;background:var(--bg3);transition:transform 0.4s;}
-.booth-gallery-item:hover img{transform:scale(1.05);}
+.booth-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;}
+.booth-gallery-item{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--border);background:var(--surface);position:relative;cursor:pointer;}
+.booth-gallery-item img,.booth-gallery-item video{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.booth-gallery-item:hover img,.booth-gallery-item:hover video{transform:scale(1.05);}
 .booth-gallery-item.wide{grid-column:span 2;aspect-ratio:2/1;}
 .booth-gallery-item .caption{position:absolute;bottom:0;left:0;right:0;padding:0.5rem 0.75rem;background:linear-gradient(transparent,rgba(10,10,15,0.85));font-family:'DM Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.7);letter-spacing:0.06em;opacity:0;transition:opacity 0.3s;}
 .booth-gallery-item:hover .caption{opacity:1;}
@@ -519,7 +519,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       <!-- F1TENTH -->
       <div class="project-card" data-cat="class" onclick="openModal('f1tenth')">
         <div class="project-img">
-          <img src="images/f1tenth-card.jpg" alt="F1Tenth autonomous race car" style="width:100%;height:100%;object-fit:cover;">
+          <img src="images/f1tenth-card.gif" alt="F1Tenth autonomous race car" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="project-body">
           <div class="project-category">Class Project · Robotics</div>
@@ -639,6 +639,10 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       <div class="booth-gallery-item">
         <img src="images/booth-batb-book.jpg" alt="Storybook finished">
         <div class="caption">Book</div>
+      </div>
+      <div class="booth-gallery-item">
+        <img src="images/booth-batb-book-2.jpg" alt="Storybook alternate view">
+        <div class="caption">Book — alternate view</div>
       </div>
     </div>
 

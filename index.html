@@ -613,24 +613,33 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
   <div class="booth-year-block">
     <div class="booth-year-header">Beauty and the Beast - 2026</div>
     <div class="booth-year-sub">Spring Carnival 2026 · <span style="color:var(--accent);">1st Place Independent · 1st Place Overall</span></div>
-    <p class="booth-desc-text">"Enchanted Objects" — a three-stage interactive game where every prop doubles as a sensor-driven trigger. Players must complete each stage to unlock the next soundtrack:</p>
-    <p class="booth-desc-text"><strong>1&nbsp;&middot;&nbsp;The Enchanted Rose</strong> — A magnetic jigsaw puzzle; embedded Hall-effect sensors detect each petal's placement. When the final piece seats, an Arduino triggers a speaker module to play <em>Tale as Old as Time</em>.</p>
-    <p class="booth-desc-text"><strong>2&nbsp;&middot;&nbsp;The Dining Table</strong> — Players arrange place settings on a themed table. Contact switches beneath each plate and utensil register correct positions; a complete setting cues <em>Be Our Guest</em> through an integrated audio system.</p>
-    <p class="booth-desc-text"><strong>3&nbsp;&middot;&nbsp;The Storybook</strong> — A hinged prop book wired with a reed switch and magnet. Opening the cover breaks the magnetic circuit, triggering a final musical cue and completing the experience.</p>
-    <p class="booth-desc-text">All three stages designed in SolidWorks and fabricated using laser cutting, 3D printing (FDM & resin), and hand-finished woodwork. Electronics built around Arduino Nano with custom PCBs for sensor conditioning, relay-driven audio playback, and 12 V LED accent lighting. Additional props — scenic flats, character silhouettes, and decorative fixtures — round out the fully themed one-story structure.</p>
-    <div class="booth-gallery">
+    <p class="booth-desc-text">"Enchanted Objects" — a three-stage interactive game where each prop hides its own electronics. Every game runs an Arduino Nano soldered to a DFPlayer Mini MP3 module and speaker on a prototyping board, with magnetic reed switches as the primary sensing mechanism. All pieces were 3D printed, laser cut, painted, and built out of wood. Themed scenic props line the front of the booth to set the scene before players step inside.</p>
+
+    <div class="booth-gallery" style="margin-bottom:1.5rem;">
       <div class="booth-gallery-item wide">
         <img src="images/booth-batb-booth-1.jpg" alt="Beauty and the Beast booth overview">
         <div class="caption">Full booth — Beauty and the Beast 2026</div>
       </div>
+      <div class="booth-gallery-item wide">
+        <img src="images/booth-batb-props.jpg" alt="Front-of-booth scenic props">
+        <div class="caption">Front-of-booth props</div>
+      </div>
+    </div>
+
+    <p class="booth-desc-text"><strong>1&nbsp;&middot;&nbsp;The Storybook</strong> — A hinged wooden book with a magnetic reed switch embedded in the spine. Opening the cover separates the magnet from the switch, triggering the Nano to play a musical cue through the DFPlayer and speaker, starting the experience.</p>
+    <div class="booth-gallery" style="margin-bottom:1.5rem;">
       <div class="booth-gallery-item">
-        <img src="images/booth-batb-rose-cad.jpg" alt="Rose puzzle CAD render">
-        <div class="caption">Rose puzzle — CAD</div>
+        <img src="images/booth-batb-book-cad.jpg" alt="Storybook CAD render">
+        <div class="caption">Storybook — CAD</div>
       </div>
       <div class="booth-gallery-item">
-        <img src="images/booth-batb-rose-progress.jpg" alt="Rose puzzle fabrication progress">
-        <div class="caption">Rose puzzle — fabrication</div>
+        <img src="images/booth-batb-book-progress.jpg" alt="Storybook build progress">
+        <div class="caption">Storybook — build progress</div>
       </div>
+    </div>
+
+    <p class="booth-desc-text"><strong>2&nbsp;&middot;&nbsp;The Dining Table</strong> — Players arrange place settings on a themed table. Magnetic reed switches beneath each position detect when the correct pieces are set down; once every setting is in place, the Nano fires the DFPlayer to play <em>Be Our Guest</em>.</p>
+    <div class="booth-gallery" style="margin-bottom:1.5rem;">
       <div class="booth-gallery-item">
         <img src="images/booth-batb-table-cad.jpg" alt="Dining table CAD render">
         <div class="caption">Dining table — CAD</div>
@@ -639,17 +648,17 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         <img src="images/booth-batb-table-progress.jpg" alt="Dining table build progress">
         <div class="caption">Dining table — build progress</div>
       </div>
+    </div>
+
+    <p class="booth-desc-text"><strong>3&nbsp;&middot;&nbsp;The Enchanted Rose</strong> — A magnetic jigsaw puzzle; reed switches detect each petal's placement. When the final piece seats, the Nano triggers <em>Tale as Old as Time</em> through the DFPlayer while two semicircular programmable LED strips run a custom twinkling and fading sequence synced to the music.</p>
+    <div class="booth-gallery" style="margin-bottom:1.5rem;">
       <div class="booth-gallery-item">
-        <img src="images/booth-batb-book-cad.jpg" alt="Storybook prop CAD render">
-        <div class="caption">Storybook — CAD</div>
+        <img src="images/booth-batb-rose-cad.jpg" alt="Rose puzzle CAD render">
+        <div class="caption">Rose puzzle — CAD</div>
       </div>
       <div class="booth-gallery-item">
-        <img src="images/booth-batb-book-progress.jpg" alt="Storybook prop build progress">
-        <div class="caption">Storybook — build progress</div>
-      </div>
-      <div class="booth-gallery-item">
-        <img src="images/booth-batb-props.jpg" alt="Additional scenic props">
-        <div class="caption">Scenic props & fixtures</div>
+        <img src="images/booth-batb-rose-progress.jpg" alt="Rose puzzle fabrication progress">
+        <div class="caption">Rose puzzle — fabrication</div>
       </div>
     </div>
   </div>

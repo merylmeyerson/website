@@ -543,8 +543,8 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         </div>
         <div class="project-body">
           <div class="project-category">Research · CMU Honors Research</div>
-          <div class="project-title">Soft Lego-like Interlocking Metasurfaces for Modular Soft Robotics <span class="project-tag" style="background:rgba(127,255,178,0.08);border-color:rgba(127,255,178,0.2);color:var(--accent);">Current</span></div>
-          <p class="project-desc">Developing soft interlocking metasurfaces (ILMs) — Lego-like, inflatable interference-based connectors — as a new class of compliant, reversible joints for modular soft robots. Integrating ILMs into the OSCAR crawling robot platform to replace its rigid/magnetic connectors and evaluating joint strength and maneuverability.</p>
+          <div class="project-title">Current: Soft Interlocking Metasurfaces for Modular Soft Robotics</div>
+          <p class="project-desc">Developing soft, Lego-like interlocking metasurfaces (ILMs) as compliant, reversible connectors for modular soft robots, integrated into the OSCAR crawling robot platform.</p>
           <div class="project-tags">
             <span class="project-tag">Soft Robotics</span><span class="project-tag">Metasurfaces</span>
             <span class="project-tag">Modular Design</span><span class="project-tag">Pneumatics</span>
@@ -559,8 +559,8 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         </div>
         <div class="project-body">
           <div class="project-category">Capstone · CMU Mechanical Engineering</div>
-          <div class="project-title">PHIL-UP: Autonomous Metal Scrap Collector</div>
-          <p class="project-desc">Capstone team project developing an autonomous system to reliably pick up and collect metal debris (nails, screws, fine shavings) from fab workshops and construction sites — a safety hazard and labor-intensive cleanup task with no existing automated solution. Electrical Integration & Software Lead.</p>
+          <div class="project-title">Current: PHIL-UP: Autonomous Metal Scrap Collector</div>
+          <p class="project-desc">Capstone project building an autonomous system to reliably collect metal debris from fab workshops and construction sites. Electrical Integration & Software Lead.</p>
           <div class="project-tags">
             <span class="project-tag">Electrical Integration</span><span class="project-tag">Software</span>
             <span class="project-tag">Sensing & Detection</span><span class="project-tag">Mechanical Design</span>
@@ -870,39 +870,16 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 const projects = {
   metasurfaces: {
     cat: 'Research · CMU Honors Research',
-    title: 'Soft Lego-like Interlocking Metasurfaces for Modular Soft Robotics',
+    title: 'Current: Soft Interlocking Metasurfaces for Modular Soft Robotics',
     body: `<img src="images/project-metasurfaces.jpg" alt="Interlocking metasurfaces for modular soft robotics" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Modular soft robots offer an alternative to conventional rigid robotic systems due to their adaptability, resilience, and potential for low-cost manufacturing. By creating systems from reconfigurable units, soft robots can adapt their morphology to different tasks, navigate unstructured environments, and recover from local failure through module replacement — valuable capabilities for applications like search and rescue.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Problem:</strong> Existing modular soft robotic systems often rely on rigid connectors or magnetic interfaces to attach modules. While effective for attachment, these solutions introduce localized stiffness and geometric constraints that undermine the inherent compliance of soft robots, limiting maneuverability and performance in complex environments.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Approach:</strong> This project introduces soft interlocking metasurfaces (ILMs) as a new class of compliant connectors for modular soft robotics. ILMs are architected arrays of interlocking features that, similar to Legos™, enable non-permanent attachment. Soft ILMs are composed of inflatable bladders that expand within a mating interface to create mechanical interference — attachment that is both reversible and has localized tunable stiffness.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Hypothesis:</strong> Soft ILMs can achieve the dual requirement of compliance and structural robustness, creating strong yet deformable attachments between soft robotic modules. To test this, the project integrates soft ILMs into an existing modular platform — the Origami-enabled Soft Crawling Autonomous Robot (OSCAR) — which currently uses magnetic connections, enabling direct comparison of strength, compliance, and system-level performance.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Project scope:</strong></p>
-    <ul style="color:var(--muted);line-height:1.8;margin-bottom:1rem;padding-left:1.25rem;">
-      <li>Design and fabricate soft ILMs based on inflatable, interference-based mechanisms</li>
-      <li>Design actuation and valving strategies for ILM arrays</li>
-      <li>Integrate ILMs into the OSCAR platform</li>
-      <li>Experimentally evaluate joint strength and robot maneuverability</li>
-    </ul>
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Existing modular soft robots rely on rigid or magnetic connectors that undermine their compliance. This project develops soft interlocking metasurfaces (ILMs): inflatable, Lego-like connectors that create reversible, tunable-stiffness attachments between modules. ILMs are being integrated into the OSCAR crawling robot platform in place of its magnetic joints to evaluate joint strength and maneuverability.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Soft Robotics</span><span class="tag">Metasurfaces</span><span class="tag">Modular Design</span><span class="tag">Pneumatics</span><span class="tag">Inflatable Structures</span></div>`
   },
   scrapbot: {
     cat: 'Capstone · CMU Mechanical Engineering',
-    title: 'PHIL-UP: Autonomous Metal Scrap Collector',
+    title: 'Current: PHIL-UP: Autonomous Metal Scrap Collector',
     body: `<img src="images/project-scrapbot.jpg" alt="Autonomous metal scrap collector capstone" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Problem:</strong> Uncleaned metal debris (nails, screws, and fine shavings) in fab workshops and construction sites poses safety hazards and is labor-intensive to clean by hand. Automatic vacuum cleaners are an established market, but automatic metal debris collection is untapped.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">Goal:</strong> Create a system that can reliably pick up and collect metal debris, including in hard-to-reach locations.</p>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:0.5rem;"><strong style="color:var(--text);">Key requirements:</strong></p>
-    <ul style="color:var(--muted);line-height:1.8;margin-bottom:1rem;padding-left:1.25rem;">
-      <li>Lifespan greater than 5 years <em>(must have)</em></li>
-      <li>Clean hard-to-reach locations <em>(must have)</em></li>
-      <li>Cost less than $500 <em>(reverse requirement)</em></li>
-      <li>Drill battery powered</li>
-      <li>Less than 20 in. wide</li>
-      <li>Unloads metal scrap into a designated bucket</li>
-      <li>Friendly design</li>
-      <li>Picks up all metal scrap, including &gt;90% of magnetic scrap</li>
-    </ul>
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;"><strong style="color:var(--text);">My role:</strong> Electrical Integration & Software Lead.</p>
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Uncleaned metal debris in fab workshops and construction sites is a safety hazard and labor-intensive to clean, with no automated solution on the market. This capstone project builds a battery-powered system, under 20 in. wide, that reliably collects metal scrap (including over 90% of magnetic scrap) and unloads it into a bucket, built to last over 5 years and cost under $500. I serve as Electrical Integration & Software Lead.</p>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Electrical Integration</span><span class="tag">Software</span><span class="tag">Sensing & Detection</span><span class="tag">Mechanical Design</span><span class="tag">Capstone</span></div>`
   },
   exo: {

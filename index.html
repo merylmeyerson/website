@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Julia Meryl Meyerson · Mechanical Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:#ffffff; --bg2:#fafafa; --bg3:#f2f2f2; --surface:#ffffff;
-  --border:rgba(20,20,20,0.1); --accent:#1a2b4a; --accent2:#1a2b4a;
-  --accent3:#1a2b4a; --text:#18181b; --muted:#5c5c64;
+  --border:rgba(20,20,20,0.18); --accent:#1a2b4a; --accent2:#1a2b4a;
+  --accent3:#1a2b4a; --text:#18181b; --muted:#45454d;
   --card-bg:rgba(20,20,20,0.02);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -22,7 +22,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:var(--text);text-decoration:none;}
 .nav-logo span{color:var(--accent);}
 .nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a{font-family:'DM Sans',sans-serif;font-size:0.84rem;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
 .nav-links a:hover{color:var(--accent);}
 
 /* HERO */
@@ -31,30 +31,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero-glow{display:none;}
 .hero-glow2{display:none;}
 .hero-content{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;position:relative;z-index:1;}
-.hero-tag{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;}
+.hero-tag{font-family:'DM Sans',sans-serif;font-size:0.84rem;color:var(--accent);font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;}
 .hero-tag::before{content:'';display:block;width:2rem;height:1px;background:var(--accent);}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:800;line-height:0.95;letter-spacing:-0.04em;margin-bottom:1.5rem;}
+h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:800;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.5rem;}
 h1 .last-name{color:transparent;-webkit-text-stroke:1.5px rgba(20,20,20,0.25);}
 .hero-desc{font-size:1rem;color:var(--muted);max-width:500px;margin-bottom:2.5rem;line-height:1.75;}
 .hero-desc strong{color:var(--text);font-weight:500;}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-primary{background:var(--accent);color:var(--bg);padding:0.7rem 1.8rem;font-family:'DM Mono',monospace;font-size:0.78rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
+.btn-primary{background:var(--accent);color:var(--bg);padding:0.7rem 1.8rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
 .btn-primary:hover{background:#0f1c33;transform:translateY(-2px);}
-.btn-secondary{border:1px solid var(--border);color:var(--muted);padding:0.7rem 1.8rem;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
+.btn-secondary{border:1px solid var(--border);color:var(--muted);padding:0.7rem 1.8rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent);}
 .hero-stats{display:flex;flex-direction:column;gap:1.25rem;}
 .stat{text-align:right;padding:1.25rem 1.5rem;border:1px solid var(--border);background:var(--card-bg);backdrop-filter:blur(10px);min-width:150px;position:relative;overflow:hidden;}
 .stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);}
 .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:0.2rem;}
-.stat-label{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.stat-label{font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
 
 /* SECTIONS */
 section{padding:5rem 3rem;max-width:1200px;margin:0 auto;}
 .section-full{max-width:none;padding:5rem 3rem;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .section-full>.inner{max-width:1200px;margin:0 auto;}
-.section-label{font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem;}
+.section-label{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--accent);font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem;}
 .section-label::before{content:'';display:block;width:1.5rem;height:1px;background:var(--accent);}
-h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:2.5rem;line-height:1.1;}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.015em;margin-bottom:2.5rem;line-height:1.2;}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:220px 1fr;gap:3.5rem;align-items:start;}
@@ -63,9 +63,9 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .about-text p{color:var(--muted);margin-bottom:1.25rem;line-height:1.8;font-size:0.95rem;}
 .about-text p strong{color:var(--text);font-weight:500;}
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-top:1.75rem;}
-.skill-group h4{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;}
+.skill-group h4{font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--accent);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;}
 .skill-tags{display:flex;flex-wrap:wrap;gap:0.35rem;}
-.tag{font-family:'DM Mono',monospace;font-size:0.7rem;padding:0.25rem 0.6rem;border:1px solid var(--border);color:var(--muted);letter-spacing:0.05em;transition:all 0.2s;}
+.tag{font-family:'DM Sans',sans-serif;font-size:0.82rem;padding:0.25rem 0.6rem;border:1px solid var(--border);color:var(--muted);letter-spacing:0.05em;transition:all 0.2s;}
 .tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(26,43,74,0.05);}
 
 /* TIMELINE */
@@ -76,16 +76,16 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .timeline-dot{position:absolute;left:-2.35rem;top:0.5rem;width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px rgba(26,43,74,0.6);}
 .timeline-meta{display:flex;align-items:baseline;gap:1rem;margin-bottom:0.35rem;flex-wrap:wrap;}
 .timeline-company{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text);}
-.timeline-role{font-family:'DM Mono',monospace;font-size:0.85rem;color:var(--accent);letter-spacing:0.06em;}
-.timeline-date{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted);margin-left:auto;}
-.timeline-location{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted);margin-bottom:0.85rem;}
+.timeline-role{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--accent);font-weight:600;letter-spacing:0.06em;}
+.timeline-date{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--muted);margin-left:auto;}
+.timeline-location{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--muted);margin-bottom:0.85rem;}
 .timeline-bullets{list-style:none;color:var(--muted);}
 .timeline-bullets li{padding:0.25rem 0;padding-left:1.2rem;position:relative;font-size:1rem;line-height:1.8;}
-.timeline-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.78rem;opacity:0.6;}
+.timeline-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:0.88rem;opacity:0.6;}
 
 /* PROJECTS */
 .projects-filter{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
-.filter-btn{font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.35rem 0.9rem;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
+.filter-btn{font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:0.35rem 0.9rem;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
 .filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(26,43,74,0.06);}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .project-card{background:var(--card-bg);border:1px solid var(--border);overflow:hidden;position:relative;cursor:pointer;transition:all 0.3s;display:flex;flex-direction:column;}
@@ -95,10 +95,10 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .project-card.featured .project-img{aspect-ratio:16/9;}
 .project-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
 .project-card:hover .project-img img{transform:scale(1.04);}
-.img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--surface),var(--bg3));color:var(--muted);font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;flex-direction:column;gap:0.5rem;}
+.img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--surface),var(--bg3));color:var(--muted);font-family:'DM Sans',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;flex-direction:column;gap:0.5rem;}
 .img-placeholder .proj-icon{font-size:2rem;opacity:0.4;}
 .project-body{padding:1rem;flex:1;display:flex;flex-direction:column;}
-.project-category{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem;}
+.project-category{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--accent2);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem;}
 .project-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;line-height:1.3;}
 .project-desc{font-size:1rem;color:var(--muted);line-height:1.75;flex:1;}
 
@@ -106,13 +106,13 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .booth-intro{color:var(--muted);margin-bottom:2.5rem;max-width:650px;font-size:0.95rem;line-height:1.75;}
 .booth-year-block{margin-bottom:3.5rem;}
 .booth-year-header{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:0.4rem;}
-.booth-year-sub{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;}
+.booth-year-sub{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--accent3);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;}
 .booth-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.75rem;}
 .booth-gallery-item{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--border);background:var(--surface);position:relative;cursor:pointer;}
 .booth-gallery-item img,.booth-gallery-item video{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
 .booth-gallery-item:hover img,.booth-gallery-item:hover video{transform:scale(1.05);}
 .booth-gallery-item.wide{grid-column:span 2;aspect-ratio:2/1;}
-.booth-gallery-item .caption{position:absolute;bottom:0;left:0;right:0;padding:0.5rem 0.75rem;background:linear-gradient(transparent,rgba(10,10,15,0.85));font-family:'DM Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.7);letter-spacing:0.06em;opacity:0;transition:opacity 0.3s;}
+.booth-gallery-item .caption{position:absolute;bottom:0;left:0;right:0;padding:0.5rem 0.75rem;background:linear-gradient(transparent,rgba(10,10,15,0.85));font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.7);font-weight:600;letter-spacing:0.06em;opacity:0;transition:opacity 0.3s;}
 .booth-gallery-item:hover .caption{opacity:1;}
 .booth-desc-text{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1.25rem;}
 
@@ -122,28 +122,26 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .misc-card:hover{border-color:rgba(26,43,74,0.2);}
 .misc-card-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;}
 .misc-card-desc{font-size:1rem;color:var(--muted);line-height:1.75;}
-.misc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.75rem;}
-.misc-tag{font-family:'DM Mono',monospace;font-size:0.7rem;padding:0.22rem 0.55rem;border:1px solid var(--border);color:var(--muted);}
 
 /* EDU */
 .edu-card{background:var(--card-bg);border:1px solid var(--border);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;position:relative;overflow:hidden;}
 .edu-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(var(--accent),var(--accent2));}
 .edu-gpa{text-align:center;padding:1.25rem 1.5rem;border:1px solid var(--border);background:rgba(26,43,74,0.04);}
 .gpa-num{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:var(--accent);line-height:1;}
-.gpa-label{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;}
+.gpa-label{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:var(--muted);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;}
 .edu-info h3{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:0.35rem;}
 .edu-degree{font-size:1rem;color:var(--muted);margin-bottom:0.25rem;}
-.edu-date{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent);letter-spacing:0.08em;margin-bottom:0.9rem;}
+.edu-date{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--accent);font-weight:600;letter-spacing:0.08em;margin-bottom:0.9rem;}
 .honors{display:flex;flex-wrap:wrap;gap:0.4rem;}
-.honor-badge{font-family:'DM Mono',monospace;font-size:0.6rem;padding:0.22rem 0.6rem;background:rgba(26,43,74,0.06);border:1px solid rgba(26,43,74,0.2);color:var(--accent);letter-spacing:0.08em;}
+.honor-badge{font-family:'DM Sans',sans-serif;font-size:0.75rem;padding:0.22rem 0.6rem;background:rgba(26,43,74,0.06);border:1px solid rgba(26,43,74,0.2);color:var(--accent);letter-spacing:0.08em;}
 
 /* CLASSES */
 .classes-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
 @media(max-width:900px){.classes-grid{grid-template-columns:1fr;}}
-.class-group h4{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem;}
+.class-group h4{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--accent2);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem;}
 .class-list{list-style:none;display:flex;flex-direction:column;gap:0.35rem;margin-bottom:1.5rem;}
 .class-list li{font-size:1rem;color:var(--muted);display:flex;align-items:baseline;gap:0.6rem;line-height:1.7;}
-.class-list li .course-num{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent);opacity:0.7;min-width:3.5rem;text-align:right;flex-shrink:0;}
+.class-list li .course-num{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--accent);opacity:0.7;min-width:3.5rem;text-align:right;flex-shrink:0;}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
@@ -152,12 +150,12 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .contact-link{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--card-bg);border:1px solid var(--border);text-decoration:none;color:var(--text);transition:all 0.2s;}
 .contact-link:hover{border-color:var(--accent);background:rgba(26,43,74,0.04);}
 .contact-link-icon{width:1.8rem;height:1.8rem;background:rgba(26,43,74,0.08);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
-.contact-link-info .label{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.contact-link-info .label{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--muted);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
 .contact-link-info .value{font-size:1rem;color:var(--text);}
 
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:1.75rem 3rem;display:flex;justify-content:space-between;align-items:center;}
-footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.08em;}
+footer p{font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.08em;}
 .footer-accent{color:var(--accent);}
 
 /* MODAL */
@@ -220,7 +218,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
   <div class="hero-content">
     <div>
       <div class="hero-tag fade-up fade-up-1">Mechanical Engineer · Robotics · CMU 2027</div>
-      <h1 class="fade-up fade-up-2">Julia Meryl<br><span class="last-name">Meyerson</span><br><span style="font-size:0.38em;font-weight:400;color:var(--muted);-webkit-text-stroke:0;letter-spacing:0.05em;font-family:'DM Mono',monospace;">(Meryl)</span></h1>
+      <h1 class="fade-up fade-up-2">Julia Meryl<br><span class="last-name">Meyerson</span><br><span style="font-size:0.38em;font-weight:400;color:var(--muted);-webkit-text-stroke:0;letter-spacing:0.05em;font-family:'DM Sans',sans-serif;">(Meryl)</span></h1>
       <p class="hero-desc fade-up fade-up-3">
         Senior at Carnegie Mellon studying mechanical engineering and robotics. Internships at Caterpillar, RST Automation, and Symbotic.
       </p>
@@ -380,7 +378,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 
     <!-- Industry -->
     <div>
-      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Industry</h3>
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--accent2);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Industry</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
@@ -426,7 +424,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 
     <!-- Research -->
     <div>
-      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Research</h3>
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--accent3);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Research</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(26,43,74,0.6);"></div>
@@ -474,7 +472,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 
     <!-- Leadership / Teaching -->
     <div>
-      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:#1a2b4a;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Teaching & Leadership</h3>
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#1a2b4a;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Teaching & Leadership</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot" style="background:#1a2b4a;box-shadow:0 0 12px rgba(26,43,74,0.5);"></div>
@@ -742,42 +740,36 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
         <img src="images/card-16280.jpg" alt="16-280 Robotics projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">16-280 Intelligent Robotics Systems</div>
         <p class="misc-card-desc"> Implemented Turtlebot with sensor fusion, ICP mapping, occupancy grid mapping, behavior trees, and regression vision models; Implemented kinematic planning on 4-DOF arm. </p>
-        <div class="misc-tags"><span class="misc-tag">ROS2</span><span class="misc-tag">Robotics</span><span class="misc-tag">CMU</span></div>
       </div>
 
       <div class="misc-card" onclick="openModal('woodworking')">
         <img src="images/card-woodworking.jpg" alt="Woodworking projects" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">Woodworking</div>
         <p class="misc-card-desc">Personal woodworking projects: chess set with 3D-printed pieces, wood-lathe desk, hand-chiseled dovetail box, tool chest, CNC bookends.</p>
-        <div class="misc-tags"><span class="misc-tag">CNC</span><span class="misc-tag">Wood Lathe</span><span class="misc-tag">Hand Tools</span></div>
       </div>
 
       <div class="misc-card" onclick="openModal('hackathon')">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:0.85rem;"><img src="images/hackathon-red-robot.jpg" alt="Red Robot Hackathon" style="width:100%;aspect-ratio:1;object-fit:cover;"><img src="images/hackathon-garbage.jpg" alt="Garbage Hackathon" style="width:100%;aspect-ratio:1;object-fit:cover;"></div>
         <div class="misc-card-title">Robot Hackathons</div>
         <p class="misc-card-desc">Two award-winning hackathon robots at CMU. <em>Red Robot Hackathon Judges' Choice</em> - PID line-following with manipulators. <em>Garbage Hackathon Best Use of E-waste</em> - creative locomotion from repurposed electronics.</p>
-        <div class="misc-tags"><span class="misc-tag">PID</span><span class="misc-tag">Mechatronics</span><span class="misc-tag">Arduino</span></div>
       </div>
 
       <div class="misc-card" onclick="openModal('walle')">
         <img src="images/misc-walle-robot.jpg" alt="Wall-E social robot" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">"Wall-E" Social Robot</div>
         <p class="misc-card-desc">Tracked robot with facial recognition, autonomous operation, and remote control. Built for CMU's Humanoids class.</p>
-        <div class="misc-tags"><span class="misc-tag">Computer Vision</span><span class="misc-tag">Mechatronics</span><span class="misc-tag">Fabrication</span></div>
       </div>
 
       <div class="misc-card" onclick="openModal('mobot')">
         <img src="images/misc-mobot.jpg" alt="MechE class projects collage" style="width:100%;aspect-ratio:3/2;object-fit:contain;background:#f0efe9;margin-bottom:0.85rem;">
         <div class="misc-card-title">Other MechE Class Projects</div>
         <p class="misc-card-desc">Gear train mechanism, Mobot (maze-navigating autonomous robot), 4-bar linkage FEA, hand-cranked flashlight, 5g acrylic bar holding 40 lb, brittle failure analysis, and more.</p>
-        <div class="misc-tags"><span class="misc-tag">Arduino</span><span class="misc-tag">SolidWorks</span><span class="misc-tag">FEA</span><span class="misc-tag">3D Printing</span></div>
       </div>
 
       <div class="misc-card" onclick="openModal('csapps')">
         <img src="images/card-csapps.jpg" alt="CS hackathons and apps" style="width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:0.85rem;">
         <div class="misc-card-title">CS Hackathons & Apps</div>
         <p class="misc-card-desc">Award-winning hackathon apps, interactive tools, and games built in Python. Includes a Set card game variant, a polynomial graphing calculator, and more.</p>
-        <div class="misc-tags"><span class="misc-tag">Python</span><span class="misc-tag">Full-Stack</span><span class="misc-tag">Hackathon</span></div>
       </div>
 
     </div>
@@ -853,7 +845,7 @@ const projects = {
     cat: 'Capstone · CMU Mechanical Engineering',
     title: 'Current: PHIL-UP: Autonomous Metal Scrap Collector',
     body: `<img src="images/project-scrapbot.gif" alt="Autonomous metal scrap collector capstone" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
-    <p style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--accent);letter-spacing:0.06em;margin-bottom:0.75rem;">SOFTWARE, ELECTRICAL & INTEGRATION LEAD</p>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.75rem;color:var(--accent);font-weight:600;letter-spacing:0.06em;margin-bottom:0.75rem;">SOFTWARE, ELECTRICAL & INTEGRATION LEAD</p>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">Uncleaned metal debris in fab workshops and construction sites is a safety hazard and labor-intensive to clean, with no automated solution on the market. This capstone project builds an autonomous system to reliably collect it.</p>
 
     <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.5rem;">Prototype 1: Software</h4>
@@ -910,30 +902,30 @@ const projects = {
     <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.3rem;">Final Project</h4>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;font-style:italic;">Racing at the Limit: Dynamic Bicycle Model Identification and Raceline Bayesian Optimization</p>
     <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem;">
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/qLtZoWshKMY" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.06em;">Final Project Video</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/qLtZoWshKMY" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--accent);font-weight:600;letter-spacing:0.06em;">Final Project Video</p></div>
     </div>
-    <div style="margin-bottom:1.5rem;"><a href="https://drive.google.com/file/d/1MhJMsoYiuilIqDG9r1R3JI1BPa7CTJgS/view" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:var(--accent);color:#fff;font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-decoration:none;border-radius:4px;transition:opacity 0.2s;">📄 View Final Report</a></div>
+    <div style="margin-bottom:1.5rem;"><a href="https://drive.google.com/file/d/1MhJMsoYiuilIqDG9r1R3JI1BPa7CTJgS/view" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:var(--accent);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-decoration:none;border-radius:4px;transition:opacity 0.2s;">📄 View Final Report</a></div>
     <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.3rem;">Race 3 — RRT/RRT* — 4th Place</h4>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Head-to-head race against other autonomous vehicles on the track.</p>
     <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1.5rem;">
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/xmDFe55oL_8" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.06em;">Race 3 — RRT/RRT*</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/xmDFe55oL_8" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--accent);font-weight:600;letter-spacing:0.06em;">Race 3 — RRT/RRT*</p></div>
     </div>
     <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.3rem;">Race 2 — 2nd Place</h4>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Time-trial race on race-specific track. Used Pure Pursuit path tracking with custom waypoint generation code to achieve a 2nd-place finish.</p>
     <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1.5rem;">
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/AZ_IALp0Yyo" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.06em;">Race 2 — 2nd Place Finish</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/AZ_IALp0Yyo" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--accent);font-weight:600;letter-spacing:0.06em;">Race 2 — 2nd Place Finish</p></div>
     </div>
     <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.75rem;">Lab Exercises</h4>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/vfAsg4Zo8oM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">RRT (Group)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/0W8NEtkXEKU" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">RRT (Sim)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/PwJ21xryKyQ" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Pure Pursuit + SLAM (Group)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/akFzCyaa6FM" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Pure Pursuit + SLAM (Sim)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/DMBNeUZL7vs" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Follow the Gap (Group)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/JdIUMIQR7N4" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Follow the Gap (Sim)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/z_yhG1TMPxs" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">PID Wall Following (Group)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/q8gTVwVzjVQ" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">PID Wall Following (Sim)</p></div>
-      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;display:flex;align-items:center;justify-content:center;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/9SO1GohdnKI" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;">Automatic Emergency Braking (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/vfAsg4Zo8oM" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">RRT (Group)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/0W8NEtkXEKU" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">RRT (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/PwJ21xryKyQ" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">Pure Pursuit + SLAM (Group)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/akFzCyaa6FM" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">Pure Pursuit + SLAM (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/DMBNeUZL7vs" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">Follow the Gap (Group)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/JdIUMIQR7N4" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">Follow the Gap (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/z_yhG1TMPxs" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">PID Wall Following (Group)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/q8gTVwVzjVQ" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">PID Wall Following (Sim)</p></div>
+      <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;display:flex;align-items:center;justify-content:center;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/9SO1GohdnKI" allowfullscreen></iframe></div><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;">Automatic Emergency Braking (Sim)</p></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">ROS2</span><span class="tag">Python</span><span class="tag">LiDAR</span><span class="tag">Path Planning</span><span class="tag">Real-Time Control</span></div>`
   },
@@ -1024,13 +1016,13 @@ const projects = {
     cat: 'Miscellaneous · Personal',
     title: 'Woodworking',
     body: `<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem;">
-      <div><img src="images/wood-chess-set.jpg" alt="Chess set" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Chess Set</p></div>
-      <div><img src="images/wood-desk.jpg" alt="Desk" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Desk</p></div>
-      <div><img src="images/wood-candlesticks.jpg" alt="Candlesticks" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Candlesticks</p></div>
-      <div><img src="images/wood-spoon.jpg" alt="Spoon" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Spoon</p></div>
-      <div><img src="images/wood-viking-chair.jpg" alt="Viking chair" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Viking Chair</p></div>
-      <div><img src="images/wood-dovetail-box.jpg" alt="Dovetail box" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Box w/ Hand-Chiseled Dovetails</p></div>
-      <div style="grid-column:1/-1;"><img src="images/wood-tool-chest.jpg" alt="Tool chest" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-top:0.35rem;">Tool Chest w/ Bottom Drawer</p></div>
+      <div><img src="images/wood-chess-set.jpg" alt="Chess set" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Chess Set</p></div>
+      <div><img src="images/wood-desk.jpg" alt="Desk" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Desk</p></div>
+      <div><img src="images/wood-candlesticks.jpg" alt="Candlesticks" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Candlesticks</p></div>
+      <div><img src="images/wood-spoon.jpg" alt="Spoon" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Spoon</p></div>
+      <div><img src="images/wood-viking-chair.jpg" alt="Viking chair" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Viking Chair</p></div>
+      <div><img src="images/wood-dovetail-box.jpg" alt="Dovetail box" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Box w/ Hand-Chiseled Dovetails</p></div>
+      <div style="grid-column:1/-1;"><img src="images/wood-tool-chest.jpg" alt="Tool chest" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border);"><p style="font-family:'DM Sans',sans-serif;font-size:0.76rem;color:var(--muted);font-weight:600;letter-spacing:0.06em;margin-top:0.35rem;">Tool Chest w/ Bottom Drawer</p></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">CNC Router</span><span class="tag">Wood Lathe</span><span class="tag">Tablesaw</span><span class="tag">Hand Tools</span></div>`
   }

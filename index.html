@@ -879,7 +879,32 @@ const projects = {
     cat: 'Capstone · CMU Mechanical Engineering',
     title: 'Current: PHIL-UP: Autonomous Metal Scrap Collector',
     body: `<img src="images/project-scrapbot.jpg" alt="Autonomous metal scrap collector capstone" class="modal-img-full" style="width:100%;margin-bottom:1.25rem;">
-    <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Uncleaned metal debris in fab workshops and construction sites is a safety hazard and labor-intensive to clean, with no automated solution on the market. This capstone project builds a battery-powered system, under 20 in. wide, that reliably collects metal scrap (including over 90% of magnetic scrap) and unloads it into a bucket, built to last over 5 years and cost under $500. I serve as Electrical Integration & Software Lead.</p>
+    <p style="color:var(--muted);line-height:1.8;margin-bottom:1.25rem;">Uncleaned metal debris in fab workshops and construction sites is a safety hazard and labor-intensive to clean, with no automated solution on the market. This capstone project builds a battery-powered system, under 20 in. wide, that reliably collects metal scrap (including over 90% of magnetic scrap) and unloads it into a bucket, built to last over 5 years and cost under $500. I serve as Electrical Integration & Software Lead.</p>
+
+    <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.5rem;">Prototype 1 — Software</h4>
+    <ul style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;padding-left:1.25rem;">
+      <li>Created custom robot URDF model with differential drive, caster wheel, and LiDAR</li>
+      <li>Built a Gazebo test environment with obstacles</li>
+      <li>Mapped the test environment with SLAM Toolbox</li>
+      <li>Created a waypoint generation node that generates a boustrophedon sweep path in row pairs, using A* for obstacle avoidance</li>
+      <li>Created a waypoint follower node that follows the generated waypoints and visualizes the sweep</li>
+    </ul>
+    <img src="images/scrapbot-software.jpg" alt="Software prototype 1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border);margin-bottom:1.5rem;">
+
+    <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.5rem;">Prototype 1 — Electrical</h4>
+    <ul style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;padding-left:1.25rem;">
+      <li>Functional LiDAR and visualization (/scan messages published on both the Pi and laptop)</li>
+      <li>Teleoperation and motor driver node for differential drive</li>
+    </ul>
+    <img src="images/scrapbot-electrical.jpg" alt="Electrical prototype 1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border);margin-bottom:1.5rem;">
+
+    <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.5rem;">Prototype 1 — Mechanical</h4>
+    <ul style="color:var(--muted);line-height:1.8;margin-bottom:0.75rem;padding-left:1.25rem;">
+      <li>CAD design</li>
+      <li>Rotating sweeper design</li>
+    </ul>
+    <img src="images/scrapbot-mechanical.jpg" alt="Mechanical prototype 1" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--border);margin-bottom:1.25rem;">
+
     <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1.25rem;"><span class="tag">Electrical Integration</span><span class="tag">Software</span><span class="tag">Sensing & Detection</span><span class="tag">Mechanical Design</span><span class="tag">Capstone</span></div>`
   },
   exo: {

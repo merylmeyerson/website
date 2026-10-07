@@ -8,10 +8,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:#0a0a0f; --bg2:#111118; --bg3:#1a1a24; --surface:#1e1e2e;
-  --border:rgba(255,255,255,0.12); --accent:#7fffb2; --accent2:#5bc8ff;
-  --accent3:#ff7eb3; --text:#f5f5f9; --muted:#d5d5e2;
-  --card-bg:rgba(255,255,255,0.04);
+  --bg:#faf9f6; --bg2:#f2f0ea; --bg3:#e9e6dd; --surface:#ffffff;
+  --border:rgba(20,20,20,0.1); --accent:#1f7a52; --accent2:#1f5f8a;
+  --accent3:#a8406a; --text:#18181b; --muted:#5c5c64;
+  --card-bg:rgba(20,20,20,0.025);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -19,7 +19,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.3;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3rem;background:rgba(10,10,15,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3rem;background:rgba(250,249,246,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
 .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;letter-spacing:-0.02em;color:var(--text);text-decoration:none;}
 .nav-logo span{color:var(--accent);}
 .nav-links{display:flex;gap:2rem;list-style:none;}
@@ -35,12 +35,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero-tag{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;}
 .hero-tag::before{content:'';display:block;width:2rem;height:1px;background:var(--accent);}
 h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:800;line-height:0.95;letter-spacing:-0.04em;margin-bottom:1.5rem;}
-h1 .last-name{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,0.4);}
+h1 .last-name{color:transparent;-webkit-text-stroke:1.5px rgba(20,20,20,0.25);}
 .hero-desc{font-size:1rem;color:var(--muted);max-width:500px;margin-bottom:2.5rem;line-height:1.75;}
 .hero-desc strong{color:var(--text);font-weight:500;}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
 .btn-primary{background:var(--accent);color:var(--bg);padding:0.7rem 1.8rem;font-family:'DM Mono',monospace;font-size:0.78rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
-.btn-primary:hover{background:#a8ffcc;transform:translateY(-2px);}
+.btn-primary:hover{background:#166240;transform:translateY(-2px);}
 .btn-secondary{border:1px solid var(--border);color:var(--muted);padding:0.7rem 1.8rem;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent);}
 .hero-stats{display:flex;flex-direction:column;gap:1.25rem;}
@@ -90,7 +90,7 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(127,255,178,0.06);}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .project-card{background:var(--card-bg);border:1px solid var(--border);overflow:hidden;position:relative;cursor:pointer;transition:all 0.3s;display:flex;flex-direction:column;}
-.project-card:hover{border-color:rgba(127,255,178,0.25);transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,0.4);}
+.project-card:hover{border-color:rgba(31,122,82,0.3);transform:translateY(-3px);box-shadow:0 16px 36px rgba(20,20,20,0.1);}
 .project-card.featured{grid-column:span 2;}
 .project-img{width:100%;aspect-ratio:4/3;background:var(--surface);overflow:hidden;position:relative;}
 .project-card.featured .project-img{aspect-ratio:16/9;}
@@ -102,8 +102,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .project-category{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem;}
 .project-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;line-height:1.3;}
 .project-desc{font-size:1rem;color:var(--muted);line-height:1.75;flex:1;}
-.project-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:1rem;}
-.project-tag{font-family:'DM Mono',monospace;font-size:0.7rem;padding:0.22rem 0.55rem;background:rgba(91,200,255,0.1);border:1px solid rgba(91,200,255,0.2);color:var(--accent2);letter-spacing:0.05em;}
 
 /* BOOTH */
 .booth-intro{color:var(--muted);margin-bottom:2.5rem;max-width:650px;font-size:0.95rem;line-height:1.75;}
@@ -164,7 +162,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 .footer-accent{color:var(--accent);}
 
 /* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(10,10,15,0.95);z-index:500;display:none;align-items:center;justify-content:center;padding:2rem;backdrop-filter:blur(10px);}
+.modal-overlay{position:fixed;inset:0;background:rgba(10,10,10,0.55);z-index:500;display:none;align-items:center;justify-content:center;padding:2rem;backdrop-filter:blur(10px);}
 .modal-overlay.open{display:flex;}
 .modal{background:var(--bg2);border:1px solid var(--border);max-width:720px;width:100%;max-height:88vh;overflow-y:auto;position:relative;}
 .modal-header{padding:1.75rem 1.75rem 1rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:1;}
@@ -478,15 +476,15 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 
     <!-- Leadership / Teaching -->
     <div>
-      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:#ffd27f;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Teaching & Leadership</h3>
+      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:#92650a;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Teaching & Leadership</h3>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:#ffd27f;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
+          <div class="timeline-dot" style="background:#92650a;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">CMU - Undergrad TA</div>
             <div class="timeline-date">Aug 2025–Present</div>
           </div>
-          <div class="timeline-role" style="color:#ffd27f;">Teaching Assistant · Mechanics I & II</div>
+          <div class="timeline-role" style="color:#92650a;">Teaching Assistant · Mechanics I & II</div>
           <div class="timeline-location">📍 Pittsburgh, PA</div>
           <ul class="timeline-bullets">
             <li>Weekly office hours and recitations for Mechanics I: 2D Design and Mechanics II, supporting students with core ME topics including statics, stress analysis, and failure modes</li>
@@ -494,12 +492,12 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           </ul>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:#ffd27f;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
+          <div class="timeline-dot" style="background:#92650a;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">SDC Booth - CMU</div>
             <div class="timeline-date">Jan 2024–Present</div>
           </div>
-          <div class="timeline-role" style="color:#ffd27f;">Game & Prop Chair</div>
+          <div class="timeline-role" style="color:#92650a;">Game & Prop Chair</div>
           <div class="timeline-location">📍 Pittsburgh, PA</div>
           <ul class="timeline-bullets">
             <li>Design and fabricate themed games and structural props for CMU's Spring Carnival booths: CAD, 3D printing, laser cutting, electronics, and woodworking</li>
@@ -507,12 +505,12 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           </ul>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:#ffd27f;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
+          <div class="timeline-dot" style="background:#92650a;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">Apex Buggy - CMU</div>
             <div class="timeline-date">Aug 2024–Present</div>
           </div>
-          <div class="timeline-role" style="color:#ffd27f;">Recruitment Chair · Mechanic</div>
+          <div class="timeline-role" style="color:#92650a;">Recruitment Chair · Mechanic</div>
           <div class="timeline-location">📍 Pittsburgh, PA</div>
           <ul class="timeline-bullets">
             <li>Build and maintain carbon fiber gravity racers - zero-engine vehicles tuned for speed and driver safety in CMU's annual Buggy race</li>
@@ -545,10 +543,6 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           <div class="project-category">Research · CMU Honors Research</div>
           <div class="project-title">Current: Soft Interlocking Metasurfaces for Modular Soft Robotics</div>
           <p class="project-desc">Developing soft, Lego-like interlocking metasurfaces (ILMs) as compliant, reversible connectors for modular soft robots, integrated into the OSCAR crawling robot platform.</p>
-          <div class="project-tags">
-            <span class="project-tag">Soft Robotics</span><span class="project-tag">Metasurfaces</span>
-            <span class="project-tag">Modular Design</span><span class="project-tag">Pneumatics</span>
-          </div>
         </div>
       </div>
 
@@ -561,10 +555,6 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           <div class="project-category">Capstone · CMU Mechanical Engineering</div>
           <div class="project-title">Current: PHIL-UP: Autonomous Metal Scrap Collector</div>
           <p class="project-desc">Capstone project building an autonomous system to reliably collect metal debris from fab workshops and construction sites. Electrical Integration & Software Lead.</p>
-          <div class="project-tags">
-            <span class="project-tag">Electrical Integration</span><span class="project-tag">Software</span>
-            <span class="project-tag">Sensing & Detection</span><span class="project-tag">Mechanical Design</span>
-          </div>
         </div>
       </div>
 
@@ -577,10 +567,6 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           <div class="project-category">Class Project · Robotics</div>
           <div class="project-title">F1Tenth Autonomous Racing</div>
           <p class="project-desc">Programmed a 1/10-scale autonomous race car. Implemented LiDAR-based perception, motion planning, and real-time control for high-speed track navigation.</p>
-          <div class="project-tags">
-            <span class="project-tag">ROS2</span><span class="project-tag">Python</span>
-            <span class="project-tag">LiDAR</span><span class="project-tag">Path Planning</span>
-          </div>
         </div>
       </div>
 
@@ -593,28 +579,18 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           <div class="project-category">Research · CMU MetaMobility Lab · Robotics Institute</div>
           <div class="project-title">Assistive Exoskeletons - Hip & Ankle</div>
           <p class="project-desc">Research on robotic hip and ankle exoskeleton development at CMU's MetaMobility Lab. Fabricated carbon fiber hip components, redesigned hip thigh bar in CF and aluminum, and designed a lightweight ankle exoskeleton to interface with the lab's broader exoskeleton system.</p>
-          <div class="project-tags">
-            <span class="project-tag">Carbon Fiber</span><span class="project-tag">SolidWorks</span>
-            <span class="project-tag">Biomechanics</span><span class="project-tag">3D Printing</span>
-            <span class="project-tag">Mechanical Design</span>
-          </div>
         </div>
       </div>
 
       <!-- UGV -->
       <div class="project-card" data-cat="research" onclick="openModal('ugv')">
         <div class="project-img">
-          <img src="images/project-ugv.jpg" alt="UGV substation robot collage" style="width:100%;height:100%;object-fit:contain;background:#111118;">
+          <img src="images/project-ugv.jpg" alt="UGV substation robot collage" style="width:100%;height:100%;object-fit:contain;background:#f0efe9;">
         </div>
         <div class="project-body">
           <div class="project-category">Research · Stevens RFAL · Published ASME JMR</div>
           <div class="project-title">Substation Inspection UGV</div>
           <p class="project-desc">Autonomous UGV for navigating and inspecting electrical substations. Developed LiDAR navigation, computer vision for barcode recognition, OCR for breaker reading, robotic manipulators, and Gazebo simulation. Published in ASME Journal of Mechanisms and Robotics.</p>
-          <div class="project-tags">
-            <span class="project-tag">ROS / Gazebo</span><span class="project-tag">LiDAR</span>
-            <span class="project-tag">Computer Vision</span><span class="project-tag">OCR</span>
-            <span class="project-tag">Python</span><span class="project-tag" style="background:rgba(127,255,178,0.08);border-color:rgba(127,255,178,0.2);color:var(--accent);">ASME Publication</span><span class="project-tag" style="background:rgba(255,126,179,0.08);border-color:rgba(255,126,179,0.2);color:var(--accent3);">ISEF International Finalist</span><span class="project-tag" style="background:rgba(255,126,179,0.08);border-color:rgba(255,126,179,0.2);color:var(--accent3);">JSHS National Delegate</span>
-          </div>
         </div>
       </div>
 
@@ -627,10 +603,6 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           <div class="project-category">Class Project · Design</div>
           <div class="project-title">Assistive Potato Masher</div>
           <p class="project-desc">Motorized assistive potato masher for users with limited hand strength or dexterity (cerebral palsy, wrist tendonitis). Self-balancing with a linear actuator for mashing force, bowl-mounted frame, ball joint with joystick control, and removable masher end for cleaning.</p>
-          <div class="project-tags">
-            <span class="project-tag">Assistive Tech</span>
-            <span class="project-tag">3D Printing</span><span class="project-tag">Electromechanical</span><span class="project-tag">User Research</span>
-          </div>
         </div>
       </div>
 
@@ -644,10 +616,6 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           <div class="project-category">Class Project · Design & Manufacturing</div>
           <div class="project-title">Hiking Chair / Backpack</div>
           <p class="project-desc">Dual-function hiking chair/backpack with adjustable telescoping legs. Designed through user research to low/mid-fidelity prototypes and a final functional build, validated with FEA and hand calculations.</p>
-          <div class="project-tags">
-            <span class="project-tag">FEA / Ansys</span><span class="project-tag">Manual Machining</span>
-            <span class="project-tag">Prototyping</span><span class="project-tag">UX Research</span>
-          </div>
         </div>
       </div>
 
@@ -801,7 +769,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       </div>
 
       <div class="misc-card" onclick="openModal('mobot')">
-        <img src="images/misc-mobot.jpg" alt="MechE class projects collage" style="width:100%;aspect-ratio:3/2;object-fit:contain;background:#111118;margin-bottom:0.85rem;">
+        <img src="images/misc-mobot.jpg" alt="MechE class projects collage" style="width:100%;aspect-ratio:3/2;object-fit:contain;background:#f0efe9;margin-bottom:0.85rem;">
         <div class="misc-card-title">Other MechE Class Projects</div>
         <p class="misc-card-desc">Gear train mechanism, Mobot (maze-navigating autonomous robot), 4-bar linkage FEA, hand-cranked flashlight, 5g acrylic bar holding 40 lb, brittle failure analysis, and more.</p>
         <div class="misc-tags"><span class="misc-tag">Arduino</span><span class="misc-tag">SolidWorks</span><span class="misc-tag">FEA</span><span class="misc-tag">3D Printing</span></div>
@@ -946,7 +914,7 @@ const projects = {
     <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem;">
       <div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--surface);border:1px solid var(--border);margin-bottom:0.4rem;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/qLtZoWshKMY" allowfullscreen></iframe></div><p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.06em;">Final Project Video</p></div>
     </div>
-    <div style="margin-bottom:1.5rem;"><a href="https://drive.google.com/file/d/1MhJMsoYiuilIqDG9r1R3JI1BPa7CTJgS/view" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:var(--accent);color:#000;font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-decoration:none;border-radius:4px;transition:opacity 0.2s;">📄 View Final Report</a></div>
+    <div style="margin-bottom:1.5rem;"><a href="https://drive.google.com/file/d/1MhJMsoYiuilIqDG9r1R3JI1BPa7CTJgS/view" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:var(--accent);color:#fff;font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-decoration:none;border-radius:4px;transition:opacity 0.2s;">📄 View Final Report</a></div>
     <h4 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.3rem;">Race 3 — RRT/RRT* — 4th Place</h4>
     <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;">Head-to-head race against other autonomous vehicles on the track.</p>
     <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1.5rem;">

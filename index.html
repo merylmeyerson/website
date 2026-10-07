@@ -9,8 +9,8 @@
 <style>
 :root {
   --bg:#faf9f6; --bg2:#f2f0ea; --bg3:#e9e6dd; --surface:#ffffff;
-  --border:rgba(20,20,20,0.1); --accent:#1f7a52; --accent2:#1f5f8a;
-  --accent3:#a8406a; --text:#18181b; --muted:#5c5c64;
+  --border:rgba(20,20,20,0.1); --accent:#1a2b4a; --accent2:#1a2b4a;
+  --accent3:#1a2b4a; --text:#18181b; --muted:#5c5c64;
   --card-bg:rgba(20,20,20,0.025);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -28,9 +28,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:7rem 3rem 4rem;position:relative;overflow:hidden;}
-.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(127,255,178,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(127,255,178,0.03) 1px,transparent 1px);background-size:60px 60px;}
-.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(ellipse,rgba(127,255,178,0.07) 0%,transparent 70%);right:-100px;top:50%;transform:translateY(-50%);pointer-events:none;}
-.hero-glow2{position:absolute;width:400px;height:400px;background:radial-gradient(ellipse,rgba(91,200,255,0.05) 0%,transparent 70%);left:-100px;bottom:0;pointer-events:none;}
+.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(20,20,20,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(20,20,20,0.02) 1px,transparent 1px);background-size:60px 60px;}
+.hero-glow{display:none;}
+.hero-glow2{display:none;}
 .hero-content{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;position:relative;z-index:1;}
 .hero-tag{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;}
 .hero-tag::before{content:'';display:block;width:2rem;height:1px;background:var(--accent);}
@@ -40,7 +40,7 @@ h1 .last-name{color:transparent;-webkit-text-stroke:1.5px rgba(20,20,20,0.25);}
 .hero-desc strong{color:var(--text);font-weight:500;}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
 .btn-primary{background:var(--accent);color:var(--bg);padding:0.7rem 1.8rem;font-family:'DM Mono',monospace;font-size:0.78rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
-.btn-primary:hover{background:#166240;transform:translateY(-2px);}
+.btn-primary:hover{background:#0f1c33;transform:translateY(-2px);}
 .btn-secondary{border:1px solid var(--border);color:var(--muted);padding:0.7rem 1.8rem;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent);}
 .hero-stats{display:flex;flex-direction:column;gap:1.25rem;}
@@ -67,14 +67,14 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .skill-group h4{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;}
 .skill-tags{display:flex;flex-wrap:wrap;gap:0.35rem;}
 .tag{font-family:'DM Mono',monospace;font-size:0.7rem;padding:0.25rem 0.6rem;border:1px solid var(--border);color:var(--muted);letter-spacing:0.05em;transition:all 0.2s;}
-.tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(127,255,178,0.05);}
+.tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(26,43,74,0.05);}
 
 /* TIMELINE */
 .timeline{position:relative;padding-left:2rem;}
 .timeline::before{content:'';position:absolute;left:0;top:0.5rem;bottom:0;width:1px;background:linear-gradient(var(--accent),transparent);opacity:0.3;}
 .timeline-item{position:relative;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border);}
 .timeline-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.timeline-dot{position:absolute;left:-2.35rem;top:0.5rem;width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px rgba(127,255,178,0.6);}
+.timeline-dot{position:absolute;left:-2.35rem;top:0.5rem;width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px rgba(26,43,74,0.6);}
 .timeline-meta{display:flex;align-items:baseline;gap:1rem;margin-bottom:0.35rem;flex-wrap:wrap;}
 .timeline-company{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text);}
 .timeline-role{font-family:'DM Mono',monospace;font-size:0.85rem;color:var(--accent);letter-spacing:0.06em;}
@@ -87,10 +87,10 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 /* PROJECTS */
 .projects-filter{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
 .filter-btn{font-family:'DM Mono',monospace;font-size:0.68rem;padding:0.35rem 0.9rem;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;}
-.filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(127,255,178,0.06);}
+.filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(26,43,74,0.06);}
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .project-card{background:var(--card-bg);border:1px solid var(--border);overflow:hidden;position:relative;cursor:pointer;transition:all 0.3s;display:flex;flex-direction:column;}
-.project-card:hover{border-color:rgba(31,122,82,0.3);transform:translateY(-3px);box-shadow:0 16px 36px rgba(20,20,20,0.1);}
+.project-card:hover{border-color:rgba(26,43,74,0.3);transform:translateY(-3px);box-shadow:0 16px 36px rgba(20,20,20,0.1);}
 .project-card.featured{grid-column:span 2;}
 .project-img{width:100%;aspect-ratio:4/3;background:var(--surface);overflow:hidden;position:relative;}
 .project-card.featured .project-img{aspect-ratio:16/9;}
@@ -120,7 +120,7 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 /* MISC */
 .misc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;}
 .misc-card{background:var(--card-bg);border:1px solid var(--border);padding:1.25rem;cursor:pointer;transition:all 0.2s;}
-.misc-card:hover{border-color:rgba(127,255,178,0.2);}
+.misc-card:hover{border-color:rgba(26,43,74,0.2);}
 .misc-card-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;}
 .misc-card-desc{font-size:1rem;color:var(--muted);line-height:1.75;}
 .misc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.75rem;}
@@ -129,14 +129,14 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 /* EDU */
 .edu-card{background:var(--card-bg);border:1px solid var(--border);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;position:relative;overflow:hidden;}
 .edu-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(var(--accent),var(--accent2));}
-.edu-gpa{text-align:center;padding:1.25rem 1.5rem;border:1px solid var(--border);background:rgba(127,255,178,0.04);}
+.edu-gpa{text-align:center;padding:1.25rem 1.5rem;border:1px solid var(--border);background:rgba(26,43,74,0.04);}
 .gpa-num{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:var(--accent);line-height:1;}
 .gpa-label{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;}
 .edu-info h3{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:0.35rem;}
 .edu-degree{font-size:1rem;color:var(--muted);margin-bottom:0.25rem;}
 .edu-date{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent);letter-spacing:0.08em;margin-bottom:0.9rem;}
 .honors{display:flex;flex-wrap:wrap;gap:0.4rem;}
-.honor-badge{font-family:'DM Mono',monospace;font-size:0.6rem;padding:0.22rem 0.6rem;background:rgba(127,255,178,0.06);border:1px solid rgba(127,255,178,0.2);color:var(--accent);letter-spacing:0.08em;}
+.honor-badge{font-family:'DM Mono',monospace;font-size:0.6rem;padding:0.22rem 0.6rem;background:rgba(26,43,74,0.06);border:1px solid rgba(26,43,74,0.2);color:var(--accent);letter-spacing:0.08em;}
 
 /* CLASSES */
 .classes-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
@@ -151,8 +151,8 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:
 .contact-cta p{color:var(--muted);margin-bottom:2rem;line-height:1.7;font-size:0.95rem;}
 .contact-links{display:flex;flex-direction:column;gap:0.85rem;}
 .contact-link{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--card-bg);border:1px solid var(--border);text-decoration:none;color:var(--text);transition:all 0.2s;}
-.contact-link:hover{border-color:var(--accent);background:rgba(127,255,178,0.04);}
-.contact-link-icon{width:1.8rem;height:1.8rem;background:rgba(127,255,178,0.08);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
+.contact-link:hover{border-color:var(--accent);background:rgba(26,43,74,0.04);}
+.contact-link-icon{width:1.8rem;height:1.8rem;background:rgba(26,43,74,0.08);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
 .contact-link-info .label{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
 .contact-link-info .value{font-size:1rem;color:var(--text);}
 
@@ -430,7 +430,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
       <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Research</h3>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(255,126,179,0.6);"></div>
+          <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(26,43,74,0.6);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">CMU MIND Lab</div>
             <div class="timeline-date">2026–2027</div>
@@ -442,7 +442,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           </ul>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(255,126,179,0.6);"></div>
+          <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(26,43,74,0.6);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">CMU MetaMobility Lab</div>
             <div class="timeline-date">2024–2025</div>
@@ -457,7 +457,7 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           </ul>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(255,126,179,0.6);"></div>
+          <div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px rgba(26,43,74,0.6);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">Stevens RFAL</div>
             <div class="timeline-date">Jun 2020–Aug 2022</div>
@@ -475,15 +475,15 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
 
     <!-- Leadership / Teaching -->
     <div>
-      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:#92650a;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Teaching & Leadership</h3>
+      <h3 style="font-family:'DM Mono',monospace;font-size:0.68rem;color:#1a2b4a;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.75rem;">Teaching & Leadership</h3>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:#92650a;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
+          <div class="timeline-dot" style="background:#1a2b4a;box-shadow:0 0 12px rgba(26,43,74,0.5);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">CMU - Undergrad TA</div>
             <div class="timeline-date">Aug 2025–Present</div>
           </div>
-          <div class="timeline-role" style="color:#92650a;">Teaching Assistant · Mechanics I & II</div>
+          <div class="timeline-role" style="color:#1a2b4a;">Teaching Assistant · Mechanics I & II</div>
           <div class="timeline-location">📍 Pittsburgh, PA</div>
           <ul class="timeline-bullets">
             <li>Weekly office hours and recitations for Mechanics I: 2D Design and Mechanics II, supporting students with core ME topics including statics, stress analysis, and failure modes</li>
@@ -491,12 +491,12 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           </ul>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:#92650a;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
+          <div class="timeline-dot" style="background:#1a2b4a;box-shadow:0 0 12px rgba(26,43,74,0.5);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">SDC Booth - CMU</div>
             <div class="timeline-date">Jan 2024–Present</div>
           </div>
-          <div class="timeline-role" style="color:#92650a;">Game & Prop Chair</div>
+          <div class="timeline-role" style="color:#1a2b4a;">Game & Prop Chair</div>
           <div class="timeline-location">📍 Pittsburgh, PA</div>
           <ul class="timeline-bullets">
             <li>Design and fabricate themed games and structural props for CMU's Spring Carnival booths: CAD, 3D printing, laser cutting, electronics, and woodworking</li>
@@ -504,12 +504,12 @@ footer p{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);le
           </ul>
         </div>
         <div class="timeline-item">
-          <div class="timeline-dot" style="background:#92650a;box-shadow:0 0 12px rgba(255,210,127,0.5);"></div>
+          <div class="timeline-dot" style="background:#1a2b4a;box-shadow:0 0 12px rgba(26,43,74,0.5);"></div>
           <div class="timeline-meta">
             <div class="timeline-company">Apex Buggy - CMU</div>
             <div class="timeline-date">Aug 2024–Present</div>
           </div>
-          <div class="timeline-role" style="color:#92650a;">Recruitment Chair · Mechanic</div>
+          <div class="timeline-role" style="color:#1a2b4a;">Recruitment Chair · Mechanic</div>
           <div class="timeline-location">📍 Pittsburgh, PA</div>
           <ul class="timeline-bullets">
             <li>Build and maintain carbon fiber gravity racers - zero-engine vehicles tuned for speed and driver safety in CMU's annual Buggy race</li>
